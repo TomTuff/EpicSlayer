@@ -3,7 +3,7 @@
 //-------------------------------------\\
 {$DEFINE SMART}
 {$i SRL\SRL.Scar}
-{$i Reflection_Dev\Reflection.Simba}
+{$i Reflection\Reflection.Simba}
 
 //-------------------------------------\\
 //             EpicSlayer              \\

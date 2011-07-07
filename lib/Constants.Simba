@@ -1,1 +1,60 @@
 //Constants
+
+const  //food inventory id's
+  tuna = 361;
+  trout = 333;
+  lobster = 379;
+  monkfish = 7946;
+  swordfish = 373;
+  shark = 385;
+
+const
+  prayerpot_4 = 2434; //prayer potion
+  prayerpot_3 = 139;
+  prayerpot_2 = 141;
+  prayerpot_1 = 143;
+
+  superstr_4 = 2440; //super str potion
+  superstr_3 = 157;
+  superstr_2 = 159;
+  superstr_1 = 161;
+
+  superatt_4 = 2436; //super att potion
+  superatt_3 = 145;
+  superatt_2 = 147;
+  superatt_1 = 149;
+
+  superdeff_4 = 2442; //super def potion
+  superdeff_3 = 163;
+  superdeff_2 = 165;
+  superdeff_1 = 167;
+
+  superantip_4 = 2448; //super antipoison potion
+  superantip_3 = 181;
+  superantip_2 = 183;
+  superantip_1 = 185;
+
+  antifire_4 = 2452; //prayer potion
+  antifire_3 = 2454;
+  antifire_2 = 2456;
+  antifire_1 = 2458;
+
+  str_4 = 113; //str potion
+  str_3 = 115;
+  str_2 = 117;
+  str_1 = 119;
+
+  att_4 = 2428; //att potion
+  att_3 = 121;
+  att_2 = 123;
+  att_1 = 125;
+
+  deff_4 = 137; //deff potion
+  deff_3 = 135;
+  deff_2 = 133;
+  deff_1 = 2432;
+
+  combat_4 = 9739; //combat potion
+  combat_3 = 9741;
+  combat_2 = 9743;
+  combat_1 = 9745;
