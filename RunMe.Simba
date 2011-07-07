@@ -1,3 +1,21 @@
-program new;
+program EpicSlayer;
+{$i EpicSlayer\lib\EpicSlayer.Simba}
+
+
+const
+  //-------------------------------------\\
+  //            SMART Constants          \\
+  //-------------------------------------\\
+  S_Server = 33;
+  S_Signed = True;
+  S_Members = True;
+  S_SuperDetail = False;
+
+
 begin
+  Smart_Server := S_Server;
+  Smart_Signed := S_Signed;
+  Smart_Members := S_Members;
+  Smart_SuperDetail := S_SuperDetail;
+  SetupEpicSlayer;
 end.

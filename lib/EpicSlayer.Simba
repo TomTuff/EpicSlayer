@@ -1,0 +1,23 @@
+//-------------------------------------\\
+//      SRL, SMART, and Reflection     \\
+//-------------------------------------\\
+{$DEFINE SMART}
+{$i SRL\SRL.Scar}
+{$i Reflection_Dev\Reflection.Simba}
+
+//-------------------------------------\\
+//             EpicSlayer              \\
+//-------------------------------------\\
+{$i EpicSlayer\lib\Constants.Simba}
+{$i EpicSlayer\lib\Paths.Simba}
+{$i EpicSlayer\lib\Fighting.Simba}
+{$i EpicSlayer\lib\Banking.Simba}
+{$i EpicSlayer\lib\Player.Simba}
+{$i EpicSlayer\lib\Masters.Simba}
+{$i EpicSlayer\lib\Monsters.Simba}
+
+
+procedure SetupEpicSlayer;
+begin
+  SetupSRL;
+end;
