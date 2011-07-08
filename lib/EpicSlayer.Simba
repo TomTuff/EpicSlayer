@@ -21,4 +21,6 @@
 procedure SetupEpicSlayer;
 begin
   SetupSRL;
+  SetLength(Monsters, 97);  //Change this number if new NPCs are added to list.
+  SetupMonsters;
 end;

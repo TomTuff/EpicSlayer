@@ -1,4 +1,5 @@
 type TMonster = record
-  Index, HP, CombatLevel, SlayerLevel: Integer;
-  Drops: TIntegerArray;
+  Name: string;
+  HP, CombatLevel, SlayerLevel: Integer;
+  IDs, Drops: TIntegerArray;
 end;

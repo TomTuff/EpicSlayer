@@ -1,1 +1,1098 @@
 //monsters
+//IDs can be found at http://pastebin.com/raw.php?i=f06EXZqS
+var
+  Monsters: array of TMonster;
+
+
+procedure SetupMonsters;
+begin
+  with Monsters[MONSTER_BANSHEE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [1612, 7810, ];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BAT] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [412, 8208, 10906, 10907, 10908, 10909];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BIRD] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [1475, 1476];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BEAR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [105, 1195, 1196, 1197]; //Grizzly bear
+      //1196, 1197 are Grizzly bear cub
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_CAVE_BUG] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [1832, 5750];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_CAVE_SLIME] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [10696];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_COW] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [81, 397, 955, 1766, 1767, 2310, 3309, 12362, 12363, 12364, 12365,
+            12366];
+      //1766, 1768, 2310, 12364, 12366 are Cow calf
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_CRAWLING_HAND] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [1648, 1649, 1650, 1651, 1652, 1653, 1654, 1655, 1656, 1657, 4226,
+            10694];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_DESERT_LIZARD] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [2804, 2805, 2806];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_DOG] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [98];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_DWARF] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [118, 120, 121, 382, 582, 3219, 3220, 3221, 3268, 3269, 3270, 3271,
+            3272, 3273, 3274, 3275, 3294, 3295, 4316, 5880, 5881, 5882, 5883,
+            5884, 5885, 8897];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_GHOST] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [103, 104, 491, 1541, 1549, 2716, 2931, 4387, 4388, 5342, 5343, 5344,
+            5345, 5346, 5347, 5348, 5349, 5350, 5351, 5352, 5369, 5370, 5371,
+            5372, 5373, 5374, 5572, 6094, 6095, 6096, 6097, 6098, 6504, 7998,
+            7999, 8623, 8713, 8714, 10821, 10822, 10823, 10824, 10825, 10826,
+            10827, 10828, 10829, 10830, 10981, 10982, 10983, 10984, 10985,
+            10986, 10987, 10988, 10989, 10990, 10991, 10992, 10993, 10994,
+            10995, 10996, 10997, 10998, 10999, 11000, 11246];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_GOBLIN] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ICEFIEND] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_MINOTAUR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_MONKEY] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SCORPION] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SKELETON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SPIDER] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_WOLF] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ZOMBIE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_CATABLEPON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_COCKATRICE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_CYCLOPS] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_FLESH_CRAWLER] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_GHOUL] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_HILL_GIANT] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_HOBGOBLIN] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ICE_WARRIOR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_KALPHITE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_MOGRE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_PYREFIEND] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ROCK_SLUG] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_VAMPIRE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_WALL_BEAST] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ABERRANT_SPECTRE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ANKOU] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BASILISK] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BLOODVELD] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BRINE_RAT] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_CROCODILE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_DUST_DEVIL] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_EARTH_WARRIOR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_GREEN_DRAGON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_HARPIE_BUG_SWARM] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ICE_GIANT] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_INFERNAL_MAGE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_JELLY] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_JUNGLE_HORROR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_KILLERWATT] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_LESSER_DEMON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_MOLANISK] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_MOSS_GIANT] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_OGRE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_OTHERWORLDLY_BEING] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SEA_SNAKE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SHADE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SHADE_WARRIOR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_TUROTH] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_WEREWOLF] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BLUE_DRAGON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BRONZE_DRAGON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_CAVE_CRAWLER] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_DAGANNOTH] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ELF] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_FEVER_SPIDER] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_FIRE_GIANT] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_GARGOYLE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_JUNGLE_STRYKEWYRM] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_KURASK] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_MUTATED_ZYGOMITE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SHADOW_WARRIOR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_TROLL] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_WARPED_TORTOISE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ABYSSAL_DEMON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_AQUANITE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BLACK_DEMON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_DESERT_STRYKEWYRM] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_GREATER_DEMON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_HELLHOUND] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_IRON_DRAGON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_NECHRYAELS] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_RED_DRAGON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SCABARITE_MINION] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SPIRITUAL_MAGE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SPIRITUAL_WARRIOR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_TERROR_DOG] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_BLACK_DRAGON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_DARK_BEAST] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_GORAK] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_ICE_STRYKEWYRM] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_MITHRIL_DRAGON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SCABARITE] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_SKELETAL_WYVERN] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_STEEL_DRAGON] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+
+
+  with Monsters[MONSTER_SUQAH] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_WATERFIEND] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+
+  with Monsters[MONSTER_TZHAAR] do
+  begin
+    Name := '';
+    HP := -1;
+    CombatLevel := -1;
+    SlayerLevel := -1;
+    IDs := [];
+    Drops := [];
+  end;
+end;
