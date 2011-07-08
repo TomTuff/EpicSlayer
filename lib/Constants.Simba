@@ -1,60 +1,169 @@
-//Constants
-
-const  //food inventory id's
-  tuna = 361;
-  trout = 333;
-  lobster = 379;
-  monkfish = 7946;
-  swordfish = 373;
-  shark = 385;
-
+//-------------------------------------\\
+//          Monster Constants          \\
+//-------------------------------------\\
 const
-  prayerpot_4 = 2434; //prayer potion
-  prayerpot_3 = 139;
-  prayerpot_2 = 141;
-  prayerpot_1 = 143;
+  MONSTER_BANSHEE = 0;
+  MONSTER_BAT = 1;
+  MONSTER_BIRD = 2;
+  MONSTER_BEAR = 3;
+  MONSTER_CAVE_BUG = 4;
+  MONSTER_CAVE_SLIME = 5;
+  MONSTER_COW = 6;
+  MONSTER_CRAWLING_HAND = 7;
+  MONSTER_DESERT_LIZARD = 8;
+  MONSTER_DOG = 9;
+  MONSTER_DWARF = 10;
+  MONSTER_GHOST = 11;
+  MONSTER_GOBLIN = 12;
+  MONSTER_ICEFIEND = 13;
+  MONSTER_MINOTAUR = 14;
+  MONSTER_MONKEY = 15;
+  MONSTER_SCORPION = 16;
+  MONSTER_SKELETON = 17;
+  MONSTER_SPIDER = 18;
+  MONSTER_WOLF = 19;
+  MONSTER_ZOMBIE = 20;
+  MONSTER_CATABLEPON = 21;
+  MONSTER_COCKATRICE = 22;
+  MONSTER_CYCLOPS = 23;
+  MONSTER_FLESH_CRAWLER = 24;
+  MONSTER_GHOUL = 25;
+  MONSTER_HILL_GIANT = 26;
+  MONSTER_HOBGOBLIN = 27;
+  MONSTER_ICE_WARRIOR = 28;
+  MONSTER_KALPHITE = 29;
+  MONSTER_MOGRE = 30;
+  MONSTER_PYREFIEND = 31;
+  MONSTER_ROCK_SLUG = 32;
+  MONSTER_VAMPIRE = 33;
+  MONSTER_WALL_BEAST = 34;
+  MONSTER_ABERRANT_SPECTRE = 35;
+  MONSTER_ANKOU = 36;
+  MONSTER_BASILISK = 37;
+  MONSTER_BLOODVELD = 38;
+  MONSTER_BRINE_RAT = 39;
+  MONSTER_CROCODILE = 40;
+  MONSTER_DUST_DEVIL = 41;
+  MONSTER_EARTH_WARRIRO = 42;
+  MONSTER_GREEN_DRAGON = 43;
+  MONSTER_HARPIE_BUG_SWARM = 44;
+  MONSTER_ICE_GIANT = 45;
+  MONSTER_INFERNAL_MAGE = 46;
+  MONSTER_JELLY = 47;
+  MONSTER_JUNGLE_HORROR = 48;
+  MONSTER_KILLERWATT = 49;
+  MONSTER_LESSER_DEMON = 50;
+  MONSTER_MOLANISK = 51;
+  MONSTER_MOSS_GIANT = 52;
+  MONSTER_OGRE = 53;
+  MONSTER_OTHERWORLDLY_BEING = 54;
+  MONSTER_SEA_SNAKE = 55;
+  MONSTER_SHADE = 56;
+  MONSTER_SHADE_WARRIOR = 57;
+  MONSTER_TUROTH = 58;
+  MONSTER_WEREWOLF = 59;
+  MONSTER_BLUE_DRAGON = 60;
+  MONSTER_BRONZE_DRAGON = 61;
+  MONSTER_CAVE_CRAWLER = 62;
+  MONSTER_DAGANNOTH = 63;
+  MONSTER_ELF = 64;
+  MONSTER_FEVER_SPIDER = 65;
+  MONSTER_FIRE_GIANT = 66;
+  MONSTER_GARGOYLE = 67;
+  MONSTER_JUNGLE_STRYKEWYRM = 68;
+  MONSTER_KURASK = 69;
+  MONSTER_MUTATED_ZYGOMITE = 70;
+  MONSTER_SHADOW_WARRIOR = 71;
+  MONSTER_TROLL = 72;
+  MONSTER_WARPED_TORTOISE = 73;
+  MONSTER_ABYSSAL_DEMON = 74;
+  MONSTER_AQUANITE = 75;
+  MONSTER_BLACK_DEMON = 75;
+  MONSTER_DESERT_STRYKEWYRM = 76;
+  MONSTER_GREATER_DEMON = 77;
+  MONSTER_HELLHOUND = 78;
+  MONSTER_IRON_DRAGON = 79;
+  MONSTER_NECHRYAELS = 80;
+  MONSTER_RED_DRAGON = 81;
+  MONSTER_SCABARITE_MINION = 82;
+  MONSTER_SPIRITUAL_MAGE = 83;
+  MONSTER_SPIRITUAL_WARRIOR = 84;
+  MONSTER_TERROR_DOG = 85;
+  MONSTER_BLACK_DRAGON = 86;
+  MONSTER_DARK_BEAST = 87;
+  MONSTER_GORAK = 88;
+  MONSTER_ICE_STRYKEWYRM = 89;
+  MONSTER_MITHRIL_DRAGON = 90;
+  MONSTER_SCABARITE = 91;
+  MONSTER_SKELETAL_WYVERN = 92;
+  MONSTER_STEEL_DRAGON = 93;
+  MONSTER_SUQAH = 94;
+  MONSTER_WATERFIEND = 95;
+  MONSTER_TZHAAR = 96;
 
-  superstr_4 = 2440; //super str potion
-  superstr_3 = 157;
-  superstr_2 = 159;
-  superstr_1 = 161;
 
-  superatt_4 = 2436; //super att potion
-  superatt_3 = 145;
-  superatt_2 = 147;
-  superatt_1 = 149;
+//-------------------------------------\\
+//           Food ID Constants         \\
+//-------------------------------------\\
+const //food inventory id's
+  FOOD_TUNA = 361;
+  FOOD_TROUT = 333;
+  FOOD_LOBSTER = 379;
+  FOOD_MONKFISH = 7946;
+  FOOD_SWORDFISH = 373;
+  FOOD_SHARK = 385;
 
-  superdeff_4 = 2442; //super def potion
-  superdeff_3 = 163;
-  superdeff_2 = 165;
-  superdeff_1 = 167;
 
-  superantip_4 = 2448; //super antipoison potion
-  superantip_3 = 181;
-  superantip_2 = 183;
-  superantip_1 = 185;
+//-------------------------------------\\
+//         Potion ID Constants         \\
+//-------------------------------------\\
+const
+  POTION_PRAYER_4 = 2434; //prayer potion
+  POTION_PRAYER_3 = 139;
+  POTION_PRAYER_2 = 141;
+  POTION_PRAYER_1 = 143;
 
-  antifire_4 = 2452; //prayer potion
-  antifire_3 = 2454;
-  antifire_2 = 2456;
-  antifire_1 = 2458;
+  POTION_SUPER_STR_4 = 2440; //super str potion
+  POTION_SUPER_STR_3 = 157;
+  POTION_SUPER_STR_2 = 159;
+  POTION_SUPER_STR_1 = 161;
 
-  str_4 = 113; //str potion
-  str_3 = 115;
-  str_2 = 117;
-  str_1 = 119;
+  POTION_SUPER_ATT_4 = 2436; //super att potion
+  POTION_SUPER_ATT = 145;
+  POTION_SUPER_ATT_2 = 147;
+  POTION_SUPER_ATT_1 = 149;
 
-  att_4 = 2428; //att potion
-  att_3 = 121;
-  att_2 = 123;
-  att_1 = 125;
+  POTION_SUPER_DEF_4 = 2442; //super def potion
+  POTION_SUPER_DEF_3 = 163;
+  POTION_SUPER_DEF_2 = 165;
+  POTION_SUPER_DEF_1 = 167;
 
-  deff_4 = 137; //deff potion
-  deff_3 = 135;
-  deff_2 = 133;
-  deff_1 = 2432;
+  POTION_SUPER_ANTIPOISON_4 = 2448; //super antipoison potion
+  POTION_SUPER_ANTIPOISON_3 = 181;
+  POTION_SUPER_ANTIPOISON_2 = 183;
+  POTION_SUPER_ANTIPOISON_1 = 185;
 
-  combat_4 = 9739; //combat potion
-  combat_3 = 9741;
-  combat_2 = 9743;
-  combat_1 = 9745;
+  POTION_ANTIFIRE_4 = 2452; //antifire potion
+  POTION_ANTIFIRE_3 = 2454;
+  POTION_ANTIFIRE_2 = 2456;
+  POTION_ANTIFIRE_1 = 2458;
+
+  POTION_STRENGTH_4 = 113; //str potion
+  POTION_STRENGTH_3 = 115;
+  POTION_STRENGTH_2 = 117;
+  POTION_STRENGTH_1 = 119;
+
+  POTION_ATTACK_4 = 2428; //att potion
+  POTION_ATTACK_3 = 121;
+  POTION_ATTACK_2 = 123;
+  POTION_ATTACK_1 = 125;
+
+  POTION_DEFENSE_4 = 137; //deff potion
+  POTION_DEFENSE_3 = 135;
+  POTION_DEFENSE_2 = 133;
+  POTION_DEFENSE_1 = 2432;
+
+  POTION_COMBAT_4 = 9739; //combat potion
+  POTION_COMBAT_3 = 9741;
+  POTION_COMBAT_2 = 9743;
+  POTION_COMBAT_1 = 9745;
