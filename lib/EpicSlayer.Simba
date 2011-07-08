@@ -16,6 +16,7 @@
 {$i EpicSlayer\lib\Player.Simba}
 {$i EpicSlayer\lib\Masters.Simba}
 {$i EpicSlayer\lib\Monsters.Simba}
+{$i EpicSlayer\lib\SlayerGear.Simba}
 
 
 procedure SetupEpicSlayer;
@@ -23,4 +24,6 @@ begin
   SetupSRL;
   SetLength(Monsters, 97);  //Change this number if new NPCs are added to list.
   SetupMonsters;
+  SetLength(SlayerGear, 22);
+  SetupSlayerGear;
 end;

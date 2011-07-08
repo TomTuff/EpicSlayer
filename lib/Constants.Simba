@@ -167,3 +167,51 @@ const
   POTION_COMBAT_3 = 9741;
   POTION_COMBAT_2 = 9743;
   POTION_COMBAT_1 = 9745;
+
+
+//-------------------------------------\\
+//      Equipment Slot Constants       \\
+//-------------------------------------\\
+//Based off of the numbers/words in GetEquippedItemBounds (gametab.scar in SRL)
+const
+  EQUIPMENT_SLOT_NULL = -1;
+  EQUIPMENT_SLOT_HEAD = 1;
+  EQUIPMENT_SLOT_BACK = 2;
+  EQUIPMENT_SLOT_NECK = 3;
+  EQUIPMENT_SLOT_QUIVER = 4;
+  EQUIPMENT_SLOT_MAIN_HAND = 5;
+  EQUIPMENT_SLOT_TORSO = 6;
+  EQUIPMENT_SLOT_OFF_HAND = 7;
+  EQUIPMENT_SLOT_LEGS = 8;
+  EQUIPMENT_SLOT_HANDS = 9;
+  EQUIPMENT_SLOT_FEET = 10;
+  EQUIPMENT_SLOT_RING = 11;
+  EQUIPMENT_SLOT_AURA = 12;
+
+
+//-------------------------------------\\
+//       Slayer Gear Constants         \\
+//-------------------------------------\\
+const
+  GEAR_FACEMASK = 0;
+  GEAR_EARMUFFS = 1;
+  GEAR_BAG_OF_SALT = 2;
+  GEAR_ICE_COOLER = 3;
+  GEAR_MIRROR_SHIELD = 4;
+  GEAR_FISHING_EXPLOSIVE = 5;
+  GEAR_BUG_LANTERN = 6;
+  GEAR_SPINY_HELMET = 7;
+  GEAR_WITCHWOOD_ICON = 8;
+  GEAR_BLACK_MASK = 9;
+  GEAR_FOCUS_SIGHT = 10;
+  GEAR_HEXCREST = 11;
+  GEAR_SLAYER_HELM = 12;
+  GEAR_FULL_SLAYER_HELM = 13;
+  GEAR_INSULATED_BOOTS = 14;
+  GEAR_SLAYER_BELL = 15;
+  GEAR_SLAYER_GLOVES = 16;
+  GEAR_FUNGICIDE_SPRAY = 17;
+  GEAR_FUNGICIDE = 18;
+  GEAR_NOSE_PEG = 19;
+  GEAR_ROCK_HAMMER = 20;
+  GEAR_CRYSTAL_CHIME = 21;

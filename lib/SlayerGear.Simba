@@ -1,0 +1,203 @@
+var
+  SlayerGear: array of TSlayerGear;
+
+
+procedure SetupSlayerGear;
+begin
+  with SlayerGear[GEAR_FACEMASK] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_HELMET;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_EARMUFFS] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_HELMET;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_BAG_OF_SALT] do
+  begin
+    Equips := False;
+    Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := True;
+    MinFinishLP := 30;
+  end;
+
+
+  with SlayerGear[GEAR_ICE_COOLER] do
+  begin
+    Equips := False;
+    Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := True;
+    MinFinishLP := 20;
+  end;
+
+
+  with SlayerGear[GEAR_MIRROR_SHIELD] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_OFF_HAND;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_FISHING_EXPLOSIVE] do
+  begin
+    Equips := False;
+    Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_BUG_LANTERN] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_OFF_HAND;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_SPINY_HELMET] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_HEAD;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_WITCHWOOD_ICON] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_NECK;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_BLACK_MASK] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_HEAD;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_FOCUS_SIGHT] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_HEAD;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_HEXCREST] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_HEAD;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_SLAYER_HELM] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_HEAD;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_FULL_SLAYER_HELM] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_HEAD;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_INSULATED_BOOTS] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_FEET;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_SLAYER_BELL] do
+  begin
+    Equips := False;
+    Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_SLAYER_GLOVES] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_HANDS;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_FUNGICIDE_SPRAY] do
+  begin
+    Equips := False;
+    Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := True;
+    MinFinishLP := 20;
+  end;
+
+
+  with SlayerGear[GEAR_FUNGICIDE] do //Use this item on Fungicide spray to refill spray; 10 sprays/refill.
+  begin
+    Equips := False;
+    Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := True;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_NOSE_PEG] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_HEAD;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_ROCK_HAMMER] do
+  begin
+    Equips := False;
+    Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := True;
+    MinFinishLP := 110;
+  end;
+
+
+  with SlayerGear[GEAR_CRYSTAL_CHIME] do
+  begin
+    Equips := False;
+    Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+end;

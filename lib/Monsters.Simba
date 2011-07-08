@@ -14,7 +14,7 @@ begin
     SlayerLevel := 15;
     IDs := [1612, 7810];
     Drops := [];
-    //Item := 0;//earmuffs
+    Item := GEAR_EARMUFFS;
   end;
 
 
@@ -107,7 +107,7 @@ begin
     SlayerLevel := 22;
     IDs := [2804, 2805, 2806];
     Drops := [];
-    //Item := [];//ice cooler
+    Item := GEAR_ICE_COOLER;
   end;
 
 
@@ -271,6 +271,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_MIRROR_SHIELD;
   end;
 
 
@@ -359,6 +360,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_FISHING_EXPLOSIVE;
   end;
 
 
@@ -381,6 +383,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_BAG_OF_SALT;
   end;
 
 
@@ -403,6 +406,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_SPINY_HELMET;
   end;
 
 
@@ -436,6 +440,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_MIRROR_SHIELD;
   end;
 
 
@@ -480,6 +485,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_FACEMASK;
   end;
 
 
@@ -513,6 +519,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_BUG_LANTERN;
   end;
 
 
@@ -557,6 +564,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    //witchwood icon? only neccessary for cave horrors, *NOT* jungle horrors.
   end;
 
 
@@ -568,6 +576,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_INSULATED_BOOTS;
   end;
 
 
@@ -766,6 +775,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_ROCK_HAMMER;
   end;
 
 
@@ -799,6 +809,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_FUNGICIDE_SPRAY;
   end;
 
 
@@ -832,6 +843,7 @@ begin
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
+    Item := GEAR_CRYSTAL_CHIME;
   end;
 
 

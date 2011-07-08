@@ -1,6 +1,13 @@
 type TMonster = record
   Name: Array of string;
-  HP, CombatLevel, SlayerLevel: Integer;
+  HP, CombatLevel, SlayerLevel, Item: Integer;
   IDs, Drops: TIntegerArray;
-  Item : TInvItem;
+end;
+
+
+type TSlayerGear = record
+  Equips: Boolean;
+  Slot: Integer;
+  Finisher: Boolean;
+  MinFinishLP: Integer;
 end;
