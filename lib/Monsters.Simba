@@ -12,9 +12,9 @@ begin
     HP := 220;
     CombatLevel := 23;
     SlayerLevel := 15;
-    IDs := [1612, 7810, ];
+    IDs := [1612, 7810];
     Drops := [];
-    Item := 0;//earmuffs
+    //Item := 0;//earmuffs
   end;
 
 
@@ -107,7 +107,7 @@ begin
     SlayerLevel := 22;
     IDs := [2804, 2805, 2806];
     Drops := [];
-    item := [];//ice cooler
+    //Item := [];//ice cooler
   end;
 
 
@@ -159,7 +159,7 @@ begin
     CombatLevel := 5;
     SlayerLevel := -1;
     IDs := [100, 101, 102, 444, 445, 1769, 1770, 1771, 1772, 1773, 1774, 1775, 1776,
-            2274, 2275, 2276, 2277, 2278, 2279, 2280, 2281, 2678, ];
+            2274, 2275, 2276, 2277, 2278, 2279, 2280, 2281, 2678];
     Drops := [];
   end;
 
@@ -177,7 +177,7 @@ begin
 
   with Monsters[MONSTER_MINOTAUR] do
   begin
-    Name := 'Minotaur';
+    Name := ['Minotaur'];
     HP := 100;
     CombatLevel := 12;
     SlayerLevel := -1;

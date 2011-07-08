@@ -108,7 +108,7 @@ begin
     begin
       //AntiBan
       //check if dead
-      CheckFCheckInventory ood;     //eat food
+      CheckInventory;     //eat food
       CheckPotion;   //take pots
       wait(500 + random(500));
       inc(c);
@@ -120,5 +120,5 @@ begin
     end;
     GetDrops; //checks for drops
     inc(count); //failsafe
-  until {find dead} checkinventory or count > 300;
+  until {find dead} CheckInventory or (count > 300);
 end;             //checks inventory, if we have supplies, and checks if we looped through to much
