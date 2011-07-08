@@ -1,7 +1,3 @@
-var
-  SlayerGear: array of TSlayerGear;
-
-
 procedure SetupSlayerGear;
 begin
   with SlayerGear[GEAR_FACEMASK] do
@@ -197,6 +193,24 @@ begin
   begin
     Equips := False;
     Slot := EQUIPMENT_SLOT_NULL;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_ANTIFIRE_SHIELD] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_OFF_HAND;
+    Finisher := False;
+    MinFinishLP := -1;
+  end;
+
+
+  with SlayerGear[GEAR_ELEMENTAL_SHIELD] do
+  begin
+    Equips := True;
+    Slot := EQUIPMENT_SLOT_OFF_HAND;
     Finisher := False;
     MinFinishLP := -1;
   end;

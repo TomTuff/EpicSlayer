@@ -1,18 +1,18 @@
-//monsters
-//IDs can be found at http://pastebin.com/raw.php?i=f06EXZqS
-var
-  Monsters: array of TMonster;
-
-
 procedure SetupMonsters;
+var
+  i: Integer;
 begin
+  for i := 0 to High(Monsters) do
+  begin
+    Monsters[i].SlayerLevel := 1;
+    Monsters[i].Item := -1;
+  end;
+
+
   with Monsters[MONSTER_BANSHEE] do
   begin
     Name := ['Banshee'];
-    HP := 220;
-    CombatLevel := 23;
     SlayerLevel := 15;
-    IDs := [1612, 7810];
     Drops := [];
     Item := GEAR_EARMUFFS;
   end;
@@ -21,10 +21,6 @@ begin
   with Monsters[MONSTER_BAT] do
   begin
     Name := ['Bat'];
-    HP := 80;
-    CombatLevel := 6;
-    SlayerLevel := -1;
-    IDs := [412, 8208, 10906, 10907, 10908, 10909];
     Drops := [];
   end;
 
@@ -32,10 +28,6 @@ begin
   with Monsters[MONSTER_BIRD] do
   begin
     Name := ['Chicken'];
-    HP := 30;
-    CombatLevel := 1;
-    SlayerLevel := -1;
-    IDs := [1475, 1476];
     Drops := [];
   end;
 
@@ -43,11 +35,6 @@ begin
   with Monsters[MONSTER_BEAR] do
   begin
     Name := ['Black bear', 'Bear cub', 'Grizzly Bear', 'Grizzly bear cub'];
-    HP := 350;
-    CombatLevel := 42;
-    SlayerLevel := -1;
-    IDs := [105, 1195, 1196, 1197]; //Grizzly bear
-      //1196, 1197 are Grizzly bear cub
     Drops := [];
   end;
 
@@ -55,10 +42,6 @@ begin
   with Monsters[MONSTER_CAVE_BUG] do
   begin
     Name := ['Cave bug'];
-    HP := 50;
-    CombatLevel := 6;
-    SlayerLevel := 7;
-    IDs := [1832, 5750];
     Drops := [];
   end;
 
@@ -66,10 +49,7 @@ begin
   with Monsters[MONSTER_CAVE_SLIME] do
   begin
     Name := ['Cave slime'];
-    HP := 250;
-    CombatLevel := 23;
     SlayerLevel := 17;
-    IDs := [10696];
     Drops := [];
   end;
 
@@ -77,12 +57,6 @@ begin
   with Monsters[MONSTER_COW] do
   begin
     Name := ['Cow', 'Cow calf'];
-    HP := 107;
-    CombatLevel := 2;
-    SlayerLevel := -1;
-    IDs := [81, 397, 955, 1766, 1767, 2310, 3309, 12362, 12363, 12364, 12365,
-            12366];
-      //1766, 1768, 2310, 12364, 12366 are Cow calf
     Drops := [];
   end;
 
@@ -90,11 +64,7 @@ begin
   with Monsters[MONSTER_CRAWLING_HAND] do
   begin
     Name := ['Crawling hand'];
-    HP := 150;
-    CombatLevel := 12;
     SlayerLevel := 5;
-    IDs := [1648, 1649, 1650, 1651, 1652, 1653, 1654, 1655, 1656, 1657, 4226,
-            10694];
     Drops := [];
   end;
 
@@ -102,10 +72,7 @@ begin
   with Monsters[MONSTER_DESERT_LIZARD] do
   begin
     Name := ['Desert lizard'];
-    HP := 250;
-    CombatLevel := 24;
     SlayerLevel := 22;
-    IDs := [2804, 2805, 2806];
     Drops := [];
     Item := GEAR_ICE_COOLER;
   end;
@@ -114,10 +81,6 @@ begin
   with Monsters[MONSTER_DOG] do
   begin
     Name := ['Guard Dog'];
-    HP := 490;
-    CombatLevel := 44;
-    SlayerLevel := -1;
-    IDs := [98];
     Drops := [];
   end;
 
@@ -125,12 +88,6 @@ begin
   with Monsters[MONSTER_DWARF] do
   begin
     Name := ['Dwarf'];
-    HP := 160;
-    CombatLevel := 10;
-    SlayerLevel := -1;
-    IDs := [118, 120, 121, 382, 582, 3219, 3220, 3221, 3268, 3269, 3270, 3271,
-            3272, 3273, 3274, 3275, 3294, 3295, 4316, 5880, 5881, 5882, 5883,
-            5884, 5885, 8897];
     Drops := [];
   end;
 
@@ -138,16 +95,6 @@ begin
   with Monsters[MONSTER_GHOST] do
   begin
     Name := ['Ghost'];
-    HP := 250;
-    CombatLevel := 19;
-    SlayerLevel := -1;
-    IDs := [103, 104, 491, 1541, 1549, 2716, 2931, 4387, 4388, 5342, 5343, 5344,
-            5345, 5346, 5347, 5348, 5349, 5350, 5351, 5352, 5369, 5370, 5371,
-            5372, 5373, 5374, 5572, 6094, 6095, 6096, 6097, 6098, 6504, 7998,
-            7999, 8623, 8713, 8714, 10821, 10822, 10823, 10824, 10825, 10826,
-            10827, 10828, 10829, 10830, 10981, 10982, 10983, 10984, 10985,
-            10986, 10987, 10988, 10989, 10990, 10991, 10992, 10993, 10994,
-            10995, 10996, 10997, 10998, 10999, 11000, 11246];
     Drops := [];
   end;
 
@@ -155,11 +102,6 @@ begin
   with Monsters[MONSTER_GOBLIN] do
   begin
     Name := ['Goblin'];
-    HP := 120;
-    CombatLevel := 5;
-    SlayerLevel := -1;
-    IDs := [100, 101, 102, 444, 445, 1769, 1770, 1771, 1772, 1773, 1774, 1775, 1776,
-            2274, 2275, 2276, 2277, 2278, 2279, 2280, 2281, 2678];
     Drops := [];
   end;
 
@@ -167,10 +109,6 @@ begin
   with Monsters[MONSTER_ICEFIEND] do
   begin
     Name := ['Icefiend'];
-    HP := 150;
-    CombatLevel := 13;
-    SlayerLevel := -1;
-    IDs := [];
     Drops := [];
   end;
 
@@ -178,10 +116,6 @@ begin
   with Monsters[MONSTER_MINOTAUR] do
   begin
     Name := ['Minotaur'];
-    HP := 100;
-    CombatLevel := 12;
-    SlayerLevel := -1;
-    IDs := [];
     Drops := [];
   end;
 
@@ -189,10 +123,6 @@ begin
   with Monsters[MONSTER_MONKEY] do
   begin
     Name := ['Monkey'];
-    HP := 60;
-    CombatLevel := 3;
-    SlayerLevel := -1;
-    IDs := [];
     Drops := [];
   end;
 
@@ -200,10 +130,6 @@ begin
   with Monsters[MONSTER_SCORPION] do
   begin
     Name := ['Scorpion'];
-    HP := 170;
-    CombatLevel := 14;
-    SlayerLevel := -1;
-    IDs := [];
     Drops := [];
   end;
 
@@ -211,10 +137,6 @@ begin
   with Monsters[MONSTER_SKELETON] do
   begin
     Name := ['Skeleton'];
-    HP := 180;
-    CombatLevel := 13;
-    SlayerLevel := -1;
-    IDs := [];
     Drops := [];
   end;
 
@@ -222,10 +144,6 @@ begin
   with Monsters[MONSTER_SPIDER] do
   begin
     Name := ['Spider', 'Giant spider'];
-    HP := 67;
-    CombatLevel := 2;
-    SlayerLevel := -1;
-    IDs := [];
     Drops := [];
   end;
 
@@ -233,10 +151,6 @@ begin
   with Monsters[MONSTER_WOLF] do
   begin
     Name := ['Wolf', 'White Wolf'];
-    HP := 340;
-    CombatLevel := 25;
-    SlayerLevel := -1;
-    IDs := [];
     Drops := [];
   end;
 
@@ -244,32 +158,21 @@ begin
   with Monsters[MONSTER_ZOMBIE] do
   begin
     Name := ['Zombie'];
-    HP := 220;
-    CombatLevel := 13;
-    SlayerLevel := -1;
-    IDs := [];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_CATABLEPON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Catablepon'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_COCKATRICE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Cockatrice'];
+    SlayerLevel := 25;
     Drops := [];
     Item := GEAR_MIRROR_SHIELD;
   end;
@@ -277,111 +180,74 @@ begin
 
   with Monsters[MONSTER_CYCLOPS] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Cyclops'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_FLESH_CRAWLER] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Flesh crawler'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_GHOUL] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Ghoul'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_HILL_GIANT] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Hill giant'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_HOBGOBLIN] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Hobgoblin'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_ICE_WARRIOR] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Ice warrior'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_KALPHITE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Kalphite worker'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_MOGRE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Mogre'];
     Drops := [];
+    SlayerLevel := 32;
     Item := GEAR_FISHING_EXPLOSIVE;
   end;
 
 
   with Monsters[MONSTER_PYREFIEND] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Pyrefiend'];
+    SlayerLevel := 30;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_ROCK_SLUG] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Rock slug'];
+    SlayerLevel := 20;
     Drops := [];
     Item := GEAR_BAG_OF_SALT;
   end;
@@ -389,22 +255,15 @@ begin
 
   with Monsters[MONSTER_VAMPIRE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Vampire'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_WALL_BEAST] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Wall beast'];
+    SlayerLevel := 35;
     Drops := [];
     Item := GEAR_SPINY_HELMET;
   end;
@@ -412,78 +271,55 @@ begin
 
   with Monsters[MONSTER_ABERRANT_SPECTRE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Aberrant spectre'];
+    SlayerLevel := 60;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_ANKOU] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Ankou'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_BASILISK] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Basilisk'];
     Drops := [];
+    SlayerLevel := 40;
     Item := GEAR_MIRROR_SHIELD;
   end;
 
 
   with Monsters[MONSTER_BLOODVELD] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Bloodveld'];
+    SlayerLevel := 50;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_BRINE_RAT] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Brine rat'];
+    SlayerLevel := 47;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_CROCODILE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Crocodile'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_DUST_DEVIL] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Dust devil'];
+    SlayerLevel := 65;
     Drops := [];
     Item := GEAR_FACEMASK;
   end;
@@ -491,90 +327,62 @@ begin
 
   with Monsters[MONSTER_EARTH_WARRIOR] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Earth warrior'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_GREEN_DRAGON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Green dragon'];
     Drops := [];
+    Item := GEAR_ANTIFIRE_SHIELD;
   end;
 
 
   with Monsters[MONSTER_HARPIE_BUG_SWARM] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Harpie bug swarm'];
     Drops := [];
+    SlayerLevel := 33;
     Item := GEAR_BUG_LANTERN;
   end;
 
 
   with Monsters[MONSTER_ICE_GIANT] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Ice giant'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_INFERNAL_MAGE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Infernal mage'];
+    SlayerLevel := 45;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_JELLY] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Jelly'];
+    SlayerLevel := 52;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_JUNGLE_HORROR] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Jungle horror'];
     Drops := [];
-    //witchwood icon? only neccessary for cave horrors, *NOT* jungle horrors.
   end;
 
 
   with Monsters[MONSTER_KILLERWATT] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Killerwatt'];
+    SlayerLevel := 37;
     Drops := [];
     Item := GEAR_INSULATED_BOOTS;
   end;
@@ -582,198 +390,126 @@ begin
 
   with Monsters[MONSTER_LESSER_DEMON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Lesser demon'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_MOLANISK] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Molanisk'];
+    SlayerLevel := 39;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_MOSS_GIANT] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Moss giant'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_OGRE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Ogre'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_OTHERWORLDLY_BEING] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Otherworldly being'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_SEA_SNAKE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Sea snake'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_SHADE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
-    Drops := [];
-  end;
-
-
-  with Monsters[MONSTER_SHADE_WARRIOR] do
-  begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Shade'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_TUROTH] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Turoth'];
+    SlayerLevel := 55;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_WEREWOLF] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Alexis', 'Boris', 'Eduard', 'Galina', 'Georg', 'Imre', 'Irina',
+             'Joseph', 'Ksenia', 'Liliya', 'Lev', 'Milla', 'Nikita', 'Nikolai',
+             'Sofiya', 'Svetlana', 'Vera', 'Yadviga', 'Yuri', 'Zoja'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_BLUE_DRAGON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Blue dragon'{, 'Baby blue dragon'}];
     Drops := [];
+    Item := GEAR_ANTIFIRE_SHIELD;
   end;
 
 
   with Monsters[MONSTER_BRONZE_DRAGON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Bronze dragon'];
     Drops := [];
+    Item := GEAR_ANTIFIRE_SHIELD;
   end;
 
 
   with Monsters[MONSTER_CAVE_CRAWLER] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Cave crawler'];
+    SlayerLevel := 10;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_DAGANNOTH] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Dagannoth'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_ELF] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Elf'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_FEVER_SPIDER] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Fever spider'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_FIRE_GIANT] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Fire giant'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_GARGOYLE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Gargoyle'];
     Drops := [];
     Item := GEAR_ROCK_HAMMER;
   end;
@@ -781,33 +517,24 @@ begin
 
   with Monsters[MONSTER_JUNGLE_STRYKEWYRM] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Jungle strykewyrm'];
+    SlayerLevel := 77;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_KURASK] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Kurask'];
+    SlayerLevel := 70;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_MUTATED_ZYGOMITE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Mutated zygomite'];
+    SlayerLevel := 57;
     Drops := [];
     Item := GEAR_FUNGICIDE_SPRAY;
   end;
@@ -815,299 +542,222 @@ begin
 
   with Monsters[MONSTER_SHADOW_WARRIOR] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Shadow warrior'];
     Drops := [];
   end;
 
 
+  Monsters[MONSTER_SHADE_WARRIOR] := Monsters[MONSTER_SHADE];
+
+
   with Monsters[MONSTER_TROLL] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Troll'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_WARPED_TORTOISE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Warped tortoise'];
     Drops := [];
+    SlayerLevel := 56;
     Item := GEAR_CRYSTAL_CHIME;
   end;
 
 
   with Monsters[MONSTER_ABYSSAL_DEMON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Abyssal demon'];
+    SlayerLevel := 85;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_AQUANITE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Aquanite'];
+    SlayerLevel := 78;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_BLACK_DEMON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Black demon'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_DESERT_STRYKEWYRM] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Desert strykewyrm'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_GREATER_DEMON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Greater demon'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_HELLHOUND] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Hellhound'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_IRON_DRAGON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Iron dragon'];
     Drops := [];
+    Item := GEAR_ANTIFIRE_SHIELD;
   end;
 
 
   with Monsters[MONSTER_NECHRYAELS] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Nechryael'];
+    SlayerLevel := 80;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_RED_DRAGON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Red dragon'];
     Drops := [];
-  end;
-
-
-  with Monsters[MONSTER_SCABARITE_MINION] do
-  begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
-    Drops := [];
+    Item := GEAR_ANTIFIRE_SHIELD;
   end;
 
 
   with Monsters[MONSTER_SPIRITUAL_MAGE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Spiritual mage'];
+    SlayerLevel := 83;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_SPIRITUAL_WARRIOR] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Spiritual warrior'];
+    SlayerLevel := 68;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_TERROR_DOG] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Terror dog'];
+    SlayerLevel := 42;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_BLACK_DRAGON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Black dragon'];
     Drops := [];
+    Item := GEAR_ANTIFIRE_SHIELD;
   end;
 
 
   with Monsters[MONSTER_DARK_BEAST] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Dark beast'];
+    SlayerLevel := 90;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_GORAK] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Gorak'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_ICE_STRYKEWYRM] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Ice strykewyrm'];
+    SlayerLevel := 93;
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_MITHRIL_DRAGON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Mithril dragon'];
     Drops := [];
+    Item := GEAR_ANTIFIRE_SHIELD;
   end;
 
 
   with Monsters[MONSTER_SCABARITE] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Small scarab'];
     Drops := [];
   end;
 
 
+  Monsters[MONSTER_SCABARITE_MINION] := Monsters[MONSTER_SCABARITE];
+
+
   with Monsters[MONSTER_SKELETAL_WYVERN] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Skeletal wyvern'];
+    SlayerLevel := 72;
     Drops := [];
+    Item := GEAR_ELEMENTAL_SHIELD;
   end;
 
 
   with Monsters[MONSTER_STEEL_DRAGON] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Steel dragon'];
     Drops := [];
+    Item := GEAR_ANTIFIRE_SHIELD;
   end;
-
-
 
 
   with Monsters[MONSTER_SUQAH] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Suqah'];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_WATERFIEND] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['Waterfiend'];
     Drops := [];
   end;
 
   with Monsters[MONSTER_TZHAAR] do
   begin
-    Name := [''];
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
-    IDs := [];
+    Name := ['TzHaar-Xil'];
     Drops := [];
+  end;
+
+
+  with Monsters[MONSTER_WARPED_TERRORBIRD] do
+  begin
+    Name := ['Warped terrorbird'];
+    SlayerLevel := 56;
+    Drops := [];
+    Item := GEAR_CRYSTAL_CHIME;
+  end;
+
+
+  with Monsters[MONSTER_CAVE_HORROR] do
+  begin
+    Name := ['Cave horror'];
+    SlayerLevel := 58;
+    Drops := [];
+    Item := GEAR_WITCHWOOD_ICON;
   end;
 end;

@@ -15,15 +15,17 @@
 {$i EpicSlayer\lib\Banking.Simba}
 {$i EpicSlayer\lib\Player.Simba}
 {$i EpicSlayer\lib\Masters.Simba}
-{$i EpicSlayer\lib\Monsters.Simba}
 {$i EpicSlayer\lib\SlayerGear.Simba}
+{$i EpicSlayer\lib\Monsters.Simba}
 
 
 procedure SetupEpicSlayer;
 begin
-  SetupSRL;
-  SetLength(Monsters, 97);  //Change this number if new NPCs are added to list.
+  SetLength(Monsters, 100);    //Change this number if new NPCs are added to list.
   SetupMonsters;
-  SetLength(SlayerGear, 22);
+  SetLength(SlayerGear, 24);  //Change this number if more slayer gear is added.
   SetupSlayerGear;
+  SetLength(Masters, 7);
+  SetupMasters;
+  SetupSRL;
 end;

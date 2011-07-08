@@ -100,6 +100,9 @@ const
   MONSTER_SUQAH = 94;
   MONSTER_WATERFIEND = 95;
   MONSTER_TZHAAR = 96;
+  MONSTER_WARPED_TERRORBIRD = 97;
+  MONSTER_CAVE_HORROR = 98;
+  MONSTER_LIVING_ROCKS = 99;
 
 
 //-------------------------------------\\
@@ -215,3 +218,39 @@ const
   GEAR_NOSE_PEG = 19;
   GEAR_ROCK_HAMMER = 20;
   GEAR_CRYSTAL_CHIME = 21;
+  GEAR_ANTIFIRE_SHIELD = 22;
+  GEAR_ELEMENTAL_SHIELD = 23;
+
+
+//-------------------------------------\\
+//           Master Constants          \\
+//-------------------------------------\\
+const
+  MASTER_BURTHORPE = 0;
+  MASTER_CANIFIS = 1;
+  MASTER_EDGEVILLE = 2;
+  MASTER_ZANARIS = 3;
+  MASTER_POLLNIVNEACH = 4;
+  MASTER_SHILO = 5;
+  MASTER_ANCIENT_CAVERN = 6;
+
+
+//-------------------------------------\\
+//            Monster Array            \\
+//-------------------------------------\\
+var
+  Monsters: array of TMonster;
+
+
+//-------------------------------------\\
+//        Slayer Gear Array            \\
+//-------------------------------------\\
+var
+  SlayerGear: array of TSlayerGear;
+
+
+//-------------------------------------\\
+//             Master Array            \\
+//-------------------------------------\\
+var
+  Masters: array of TMaster;
