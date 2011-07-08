@@ -8,20 +8,21 @@ procedure SetupMonsters;
 begin
   with Monsters[MONSTER_BANSHEE] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
+    Name := ['Banshee'];
+    HP := 220;
+    CombatLevel := 23;
+    SlayerLevel := 15;
     IDs := [1612, 7810, ];
     Drops := [];
+    Item := 0;//earmuffs
   end;
 
 
   with Monsters[MONSTER_BAT] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Bat'];
+    HP := 80;
+    CombatLevel := 6;
     SlayerLevel := -1;
     IDs := [412, 8208, 10906, 10907, 10908, 10909];
     Drops := [];
@@ -30,9 +31,9 @@ begin
 
   with Monsters[MONSTER_BIRD] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Chicken'];
+    HP := 30;
+    CombatLevel := 1;
     SlayerLevel := -1;
     IDs := [1475, 1476];
     Drops := [];
@@ -41,9 +42,9 @@ begin
 
   with Monsters[MONSTER_BEAR] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Black bear', 'Bear cub', 'Grizzly Bear', 'Grizzly bear cub'];
+    HP := 350;
+    CombatLevel := 42;
     SlayerLevel := -1;
     IDs := [105, 1195, 1196, 1197]; //Grizzly bear
       //1196, 1197 are Grizzly bear cub
@@ -53,10 +54,10 @@ begin
 
   with Monsters[MONSTER_CAVE_BUG] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
+    Name := ['Cave bug'];
+    HP := 50;
+    CombatLevel := 6;
+    SlayerLevel := 7;
     IDs := [1832, 5750];
     Drops := [];
   end;
@@ -64,10 +65,10 @@ begin
 
   with Monsters[MONSTER_CAVE_SLIME] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
+    Name := ['Cave slime'];
+    HP := 250;
+    CombatLevel := 23;
+    SlayerLevel := 17;
     IDs := [10696];
     Drops := [];
   end;
@@ -75,9 +76,9 @@ begin
 
   with Monsters[MONSTER_COW] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Cow', 'Cow calf'];
+    HP := 107;
+    CombatLevel := 2;
     SlayerLevel := -1;
     IDs := [81, 397, 955, 1766, 1767, 2310, 3309, 12362, 12363, 12364, 12365,
             12366];
@@ -88,10 +89,10 @@ begin
 
   with Monsters[MONSTER_CRAWLING_HAND] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
+    Name := ['Crawling hand'];
+    HP := 150;
+    CombatLevel := 12;
+    SlayerLevel := 5;
     IDs := [1648, 1649, 1650, 1651, 1652, 1653, 1654, 1655, 1656, 1657, 4226,
             10694];
     Drops := [];
@@ -100,20 +101,21 @@ begin
 
   with Monsters[MONSTER_DESERT_LIZARD] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
-    SlayerLevel := -1;
+    Name := ['Desert lizard'];
+    HP := 250;
+    CombatLevel := 24;
+    SlayerLevel := 22;
     IDs := [2804, 2805, 2806];
     Drops := [];
+    item := [];//ice cooler
   end;
 
 
   with Monsters[MONSTER_DOG] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Guard Dog'];
+    HP := 490;
+    CombatLevel := 44;
     SlayerLevel := -1;
     IDs := [98];
     Drops := [];
@@ -122,9 +124,9 @@ begin
 
   with Monsters[MONSTER_DWARF] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Dwarf'];
+    HP := 160;
+    CombatLevel := 10;
     SlayerLevel := -1;
     IDs := [118, 120, 121, 382, 582, 3219, 3220, 3221, 3268, 3269, 3270, 3271,
             3272, 3273, 3274, 3275, 3294, 3295, 4316, 5880, 5881, 5882, 5883,
@@ -135,9 +137,9 @@ begin
 
   with Monsters[MONSTER_GHOST] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Ghost'];
+    HP := 250;
+    CombatLevel := 19;
     SlayerLevel := -1;
     IDs := [103, 104, 491, 1541, 1549, 2716, 2931, 4387, 4388, 5342, 5343, 5344,
             5345, 5346, 5347, 5348, 5349, 5350, 5351, 5352, 5369, 5370, 5371,
@@ -152,20 +154,21 @@ begin
 
   with Monsters[MONSTER_GOBLIN] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Goblin'];
+    HP := 120;
+    CombatLevel := 5;
     SlayerLevel := -1;
-    IDs := [];
+    IDs := [100, 101, 102, 444, 445, 1769, 1770, 1771, 1772, 1773, 1774, 1775, 1776,
+            2274, 2275, 2276, 2277, 2278, 2279, 2280, 2281, 2678, ];
     Drops := [];
   end;
 
 
   with Monsters[MONSTER_ICEFIEND] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Icefiend'];
+    HP := 150;
+    CombatLevel := 13;
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
@@ -174,9 +177,9 @@ begin
 
   with Monsters[MONSTER_MINOTAUR] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := 'Minotaur';
+    HP := 100;
+    CombatLevel := 12;
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
@@ -185,9 +188,9 @@ begin
 
   with Monsters[MONSTER_MONKEY] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Monkey'];
+    HP := 60;
+    CombatLevel := 3;
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
@@ -196,9 +199,9 @@ begin
 
   with Monsters[MONSTER_SCORPION] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Scorpion'];
+    HP := 170;
+    CombatLevel := 14;
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
@@ -207,9 +210,9 @@ begin
 
   with Monsters[MONSTER_SKELETON] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Skeleton'];
+    HP := 180;
+    CombatLevel := 13;
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
@@ -218,9 +221,9 @@ begin
 
   with Monsters[MONSTER_SPIDER] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Spider', 'Giant spider'];
+    HP := 67;
+    CombatLevel := 2;
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
@@ -229,9 +232,9 @@ begin
 
   with Monsters[MONSTER_WOLF] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Wolf', 'White Wolf'];
+    HP := 340;
+    CombatLevel := 25;
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
@@ -240,9 +243,9 @@ begin
 
   with Monsters[MONSTER_ZOMBIE] do
   begin
-    Name := '';
-    HP := -1;
-    CombatLevel := -1;
+    Name := ['Zombie'];
+    HP := 220;
+    CombatLevel := 13;
     SlayerLevel := -1;
     IDs := [];
     Drops := [];
@@ -251,7 +254,7 @@ begin
 
   with Monsters[MONSTER_CATABLEPON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -262,7 +265,7 @@ begin
 
   with Monsters[MONSTER_COCKATRICE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -273,7 +276,7 @@ begin
 
   with Monsters[MONSTER_CYCLOPS] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -284,7 +287,7 @@ begin
 
   with Monsters[MONSTER_FLESH_CRAWLER] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -295,7 +298,7 @@ begin
 
   with Monsters[MONSTER_GHOUL] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -306,7 +309,7 @@ begin
 
   with Monsters[MONSTER_HILL_GIANT] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -317,7 +320,7 @@ begin
 
   with Monsters[MONSTER_HOBGOBLIN] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -328,7 +331,7 @@ begin
 
   with Monsters[MONSTER_ICE_WARRIOR] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -339,7 +342,7 @@ begin
 
   with Monsters[MONSTER_KALPHITE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -350,7 +353,7 @@ begin
 
   with Monsters[MONSTER_MOGRE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -361,7 +364,7 @@ begin
 
   with Monsters[MONSTER_PYREFIEND] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -372,7 +375,7 @@ begin
 
   with Monsters[MONSTER_ROCK_SLUG] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -383,7 +386,7 @@ begin
 
   with Monsters[MONSTER_VAMPIRE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -394,7 +397,7 @@ begin
 
   with Monsters[MONSTER_WALL_BEAST] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -405,7 +408,7 @@ begin
 
   with Monsters[MONSTER_ABERRANT_SPECTRE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -416,7 +419,7 @@ begin
 
   with Monsters[MONSTER_ANKOU] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -427,7 +430,7 @@ begin
 
   with Monsters[MONSTER_BASILISK] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -438,7 +441,7 @@ begin
 
   with Monsters[MONSTER_BLOODVELD] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -449,7 +452,7 @@ begin
 
   with Monsters[MONSTER_BRINE_RAT] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -460,7 +463,7 @@ begin
 
   with Monsters[MONSTER_CROCODILE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -471,7 +474,7 @@ begin
 
   with Monsters[MONSTER_DUST_DEVIL] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -482,7 +485,7 @@ begin
 
   with Monsters[MONSTER_EARTH_WARRIOR] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -493,7 +496,7 @@ begin
 
   with Monsters[MONSTER_GREEN_DRAGON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -504,7 +507,7 @@ begin
 
   with Monsters[MONSTER_HARPIE_BUG_SWARM] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -515,7 +518,7 @@ begin
 
   with Monsters[MONSTER_ICE_GIANT] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -526,7 +529,7 @@ begin
 
   with Monsters[MONSTER_INFERNAL_MAGE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -537,7 +540,7 @@ begin
 
   with Monsters[MONSTER_JELLY] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -548,7 +551,7 @@ begin
 
   with Monsters[MONSTER_JUNGLE_HORROR] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -559,7 +562,7 @@ begin
 
   with Monsters[MONSTER_KILLERWATT] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -570,7 +573,7 @@ begin
 
   with Monsters[MONSTER_LESSER_DEMON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -581,7 +584,7 @@ begin
 
   with Monsters[MONSTER_MOLANISK] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -592,7 +595,7 @@ begin
 
   with Monsters[MONSTER_MOSS_GIANT] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -603,7 +606,7 @@ begin
 
   with Monsters[MONSTER_OGRE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -614,7 +617,7 @@ begin
 
   with Monsters[MONSTER_OTHERWORLDLY_BEING] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -625,7 +628,7 @@ begin
 
   with Monsters[MONSTER_SEA_SNAKE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -636,7 +639,7 @@ begin
 
   with Monsters[MONSTER_SHADE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -647,7 +650,7 @@ begin
 
   with Monsters[MONSTER_SHADE_WARRIOR] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -658,7 +661,7 @@ begin
 
   with Monsters[MONSTER_TUROTH] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -669,7 +672,7 @@ begin
 
   with Monsters[MONSTER_WEREWOLF] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -680,7 +683,7 @@ begin
 
   with Monsters[MONSTER_BLUE_DRAGON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -691,7 +694,7 @@ begin
 
   with Monsters[MONSTER_BRONZE_DRAGON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -702,7 +705,7 @@ begin
 
   with Monsters[MONSTER_CAVE_CRAWLER] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -713,7 +716,7 @@ begin
 
   with Monsters[MONSTER_DAGANNOTH] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -724,7 +727,7 @@ begin
 
   with Monsters[MONSTER_ELF] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -735,7 +738,7 @@ begin
 
   with Monsters[MONSTER_FEVER_SPIDER] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -746,7 +749,7 @@ begin
 
   with Monsters[MONSTER_FIRE_GIANT] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -757,7 +760,7 @@ begin
 
   with Monsters[MONSTER_GARGOYLE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -768,7 +771,7 @@ begin
 
   with Monsters[MONSTER_JUNGLE_STRYKEWYRM] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -779,7 +782,7 @@ begin
 
   with Monsters[MONSTER_KURASK] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -790,7 +793,7 @@ begin
 
   with Monsters[MONSTER_MUTATED_ZYGOMITE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -801,7 +804,7 @@ begin
 
   with Monsters[MONSTER_SHADOW_WARRIOR] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -812,7 +815,7 @@ begin
 
   with Monsters[MONSTER_TROLL] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -823,7 +826,7 @@ begin
 
   with Monsters[MONSTER_WARPED_TORTOISE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -834,7 +837,7 @@ begin
 
   with Monsters[MONSTER_ABYSSAL_DEMON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -845,7 +848,7 @@ begin
 
   with Monsters[MONSTER_AQUANITE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -856,7 +859,7 @@ begin
 
   with Monsters[MONSTER_BLACK_DEMON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -867,7 +870,7 @@ begin
 
   with Monsters[MONSTER_DESERT_STRYKEWYRM] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -878,7 +881,7 @@ begin
 
   with Monsters[MONSTER_GREATER_DEMON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -889,7 +892,7 @@ begin
 
   with Monsters[MONSTER_HELLHOUND] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -900,7 +903,7 @@ begin
 
   with Monsters[MONSTER_IRON_DRAGON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -911,7 +914,7 @@ begin
 
   with Monsters[MONSTER_NECHRYAELS] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -922,7 +925,7 @@ begin
 
   with Monsters[MONSTER_RED_DRAGON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -933,7 +936,7 @@ begin
 
   with Monsters[MONSTER_SCABARITE_MINION] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -944,7 +947,7 @@ begin
 
   with Monsters[MONSTER_SPIRITUAL_MAGE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -955,7 +958,7 @@ begin
 
   with Monsters[MONSTER_SPIRITUAL_WARRIOR] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -966,7 +969,7 @@ begin
 
   with Monsters[MONSTER_TERROR_DOG] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -977,7 +980,7 @@ begin
 
   with Monsters[MONSTER_BLACK_DRAGON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -988,7 +991,7 @@ begin
 
   with Monsters[MONSTER_DARK_BEAST] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -999,7 +1002,7 @@ begin
 
   with Monsters[MONSTER_GORAK] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -1010,7 +1013,7 @@ begin
 
   with Monsters[MONSTER_ICE_STRYKEWYRM] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -1021,7 +1024,7 @@ begin
 
   with Monsters[MONSTER_MITHRIL_DRAGON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -1032,7 +1035,7 @@ begin
 
   with Monsters[MONSTER_SCABARITE] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -1043,7 +1046,7 @@ begin
 
   with Monsters[MONSTER_SKELETAL_WYVERN] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -1054,7 +1057,7 @@ begin
 
   with Monsters[MONSTER_STEEL_DRAGON] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -1067,7 +1070,7 @@ begin
 
   with Monsters[MONSTER_SUQAH] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -1078,7 +1081,7 @@ begin
 
   with Monsters[MONSTER_WATERFIEND] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;
@@ -1088,7 +1091,7 @@ begin
 
   with Monsters[MONSTER_TZHAAR] do
   begin
-    Name := '';
+    Name := [''];
     HP := -1;
     CombatLevel := -1;
     SlayerLevel := -1;

@@ -1,5 +1,6 @@
 type TMonster = record
-  Name: string;
+  Name: Array of string;
   HP, CombatLevel, SlayerLevel: Integer;
   IDs, Drops: TIntegerArray;
+  Item : TInvItem;
 end;
