@@ -1,0 +1,4 @@
+type TMonster = record
+  Index, HP, CombatLevel, SlayerLevel: Integer;
+  Drops: TIntegerArray;
+end;

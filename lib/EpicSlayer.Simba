@@ -8,6 +8,7 @@
 //-------------------------------------\\
 //             EpicSlayer              \\
 //-------------------------------------\\
+{$i EpicSlayer\lib\Records.Simba}
 {$i EpicSlayer\lib\Constants.Simba}
 {$i EpicSlayer\lib\Paths.Simba}
 {$i EpicSlayer\lib\Fighting.Simba}
