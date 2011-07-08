@@ -1,1 +1,124 @@
 //fighting
+
+function Escape : boolean;
+begin
+  //if out of food/supplies/inv full
+  //telly out of place
+  result := true;
+end;
+
+function EatFood : boolean;
+begin
+  result := true;
+end;
+
+function WaitForMonster : boolean;
+begin
+
+end;
+
+function GetDrops : boolean;
+begin
+  //if infight then exit?
+  //checks if invfull, then looks for drop to pick up
+  result := true;
+end;
+
+function FindMonster : boolean;
+begin
+  //finds monster on minimap
+  //WaitForMonster
+end;
+
+function RelocateToMonster : boolean;
+begin
+  //if no monster on mainscreen, walks to monster
+  //thats not in a fight
+end;
+
+function CheckFood : boolean;
+begin
+  //checks if have food, if not escape,
+  //if so check if need to eat
+  if HPPercent < 50 then
+   EatFood;
+  result := true;
+end;
+
+function CheckPotion : boolean;
+begin
+  //checks if we have potions
+  //takes them if needed, escape and resupply
+  //if no pots, and required
+  result := true;
+end;
+
+function CheckTask : boolean;
+begin
+  //gets the current task,
+  //checks location
+  //react accordingly
+  result := true;
+end;
+
+function CheckInventory : boolean;
+begin
+
+end;
+
+function FightMonster : boolean;
+begin
+
+end;
+
+function SetupFighting : boolean;
+begin
+  if not LoggedIn then
+    loginplayer;
+  R_FindRandoms;
+
+  SetAngle(true);
+  SetRun(true);
+
+  if not CheckTask then
+    exit;//dosomething
+end;
+
+function DoFight : boolean;
+var
+  c, count : integer;
+begin
+  SetupFighting;
+  CheckFood;
+  CheckPotion;
+  repeat
+    if not FindMonster then //finds monster on minimap
+      exit; //do some relocation stuff,
+            //check location, deathwalk stuff
+    if not RelocateToMonster then //walks to monster, so it's on mainscreen
+      exit;//can't get to monster for some reason
+    if not CheckFood or CheckPotion then //if out of food or pots
+      if not Escape then //if cannot escape/go to bank
+        exit;//do something
+    if not R_InCombat then //if not in combat then attack monster
+      FightMonster;
+    if didredclick then //checks if actually clicked monster
+      while not r_InCombat do wait(10 + random(10));
+    while R_InCombat do //loops through while in combat
+    begin
+      //AntiBan
+      //check if dead
+      CheckFCheckInventory ood;     //eat food
+      CheckPotion;   //take pots
+      wait(500 + random(500));
+      inc(c);
+      if c > 180 then  //if in combat for more than min and half break
+      begin
+        writeln('Been in fight for to long');
+        break;
+      end;
+    end;
+    GetDrops; //checks for drops
+    inc(count); //failsafe
+  until {find dead} checkinventory or count > 300;
+end;             //checks inventory, if we have supplies, and checks if we looped through to much
