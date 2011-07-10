@@ -10,12 +10,95 @@ const
   S_Signed = True;
   S_Members = True;
   S_SuperDetail = False;
+  //
+  NumberOfSlayers = 1;
 
 
+procedure DeclareSlayers;
+begin
+  with Slayers[0] do
+  begin
+    Master := Masters[MASTER_SHILO]; //Change master_shilo
+    User.Name := ''; //Player's username
+    User.Pass := ''; //Player's password
+    User.Active := True; //Use this Player?
+  end;
+end;
+
+
+function GetTask: Boolean;
+label ProcStart;
+var
+  Master: TNPC;
+  P: TPoint;
+  i, ii, T: Integer;
+  ChatLines: TStringArray;
+begin
+  ProcStart:
+  if not(LoggedIn) then
+    Exit;
+  if not(R_FindNPCMulti(Slayers[CurrentPlayer].Master.IDs, True, Master)) then
+  begin
+    srl_Warn('GetTask', 'We could not find the slayer master.', warn_AllVersions);
+    Exit;
+  end;
+  if not(R_TileOnMS(Master.Tile, Round(2 / 3) * Master.Height)) then
+  begin
+    srl_Warn('GetTask', 'The master''s tile was not on the main screen, walking to the tile and re-finding', warn_AllVersions);
+    R_WalkToTile(Master.Tile, 2, 0);
+    goto ProcStart;
+  end;
+  P := R_TileToMS(Master.Tile, Round(2 / 3) * Master.Height);
+  MMouse(P.x - 3, P.y - 3, 6, 6);
+  Wait(50 + Random(20));
+  if IsUpTextMultiCustom(Slayers[CurrentPlayer].Master.Names) or R_IsUpTextMulti(Slayers[CurrentPlayer].Master.Names) then
+  begin
+    ClickMouse2(False);
+    Wait(50 + Random(20));
+    if (ChooseOption('Get-task') or R_ChooseOption('Get-task')) then
+    T := GetSystemTime + 2000;
+    while ((GetSystemTime < T) and not(Result)) do
+      if FindBlackChatMessage('nother') then
+      begin
+        Wait(50 + Random(20));
+        ChatLines := R_GetNPCChatMessages;
+        for i := 0 to High(ChatLines) do
+          if (GetNumbers(ChatLines[i]) <> '') then
+          begin
+            Slayers[CurrentPlayer].Assignment.Amount := StrToInt(GetNumbers(ChatLines[i]));
+            Break;
+          end;
+        if ClickContinue(True, False) then
+        begin
+          for i := 0 to High(Monsters) do
+            for ii := 0 to High(Monsters[i].Name) do
+              if FindBlackChatMessage(Monsters[i].Name[ii]) then
+              begin
+                Slayers[CurrentPlayer].Assignment.Monster := i;
+                Result := True;
+                Writeln('Successfully got an assignment! It''s ' + ToStr(Slayers[CurrentPlayer].Assignment.Amount) + ' ' + ToStr(Slayers[CurrentPlayer].Assignment.Monster) + 's!');
+                Break;
+              end;
+        end;
+      end;
+  end;
+end;
+
+
+var
+  i: Integer;
 begin
   Smart_Server := S_Server;
   Smart_Signed := S_Signed;
   Smart_Members := S_Members;
   Smart_SuperDetail := S_SuperDetail;
+  HowManySlayers := NumberOfSlayers;
   SetupEpicSlayer;
+  DeclareSlayers;
+  for i := 0 to (HowManySlayers - 1) do
+    Players[i] := Slayers[i].User;
+  LoginPlayer;
+  SetAngle(True);
+  MakeCompass('n');
+  GetTask;
 end.

@@ -108,7 +108,8 @@ begin
 
   with Masters[MASTER_ANCIENT_CAVERN] do
   begin
-    Names := ['Kuradal'];
+    Names := ['Kuradal', 'Lapalok'];
+    IDs := [8483];
     SlayerLevelReq := 75;
     CombatLevelReq := 110;
     Assigns := [MONSTER_ABERRANT_SPECTRE, MONSTER_ABYSSAL_DEMON, MONSTER_AQUANITE,

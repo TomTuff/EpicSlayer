@@ -16,6 +16,19 @@ end;
 
 type TMaster = record
   Names: TStringArray;
+  IDs: TVariantArray;
   SlayerLevelReq, CombatLevelReq: Integer;
   Assigns: TIntegerArray;
+end;
+
+
+type TAssignment = record
+  Monster, Amount: Integer;
+end;
+
+
+type TSlayer = record
+  User: TUser;
+  Master: TMaster;
+  Assignment: TAssignment;
 end;

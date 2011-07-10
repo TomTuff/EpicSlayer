@@ -1,6 +1,6 @@
 //fighting
 
-function Escape : boolean;
+{function Escape : boolean;
 begin
   //if out of food/supplies/inv full
   //telly out of place
@@ -120,5 +120,5 @@ begin
     end;
     GetDrops; //checks for drops
     inc(count); //failsafe
-  until {find dead} CheckInventory or (count > 300);
-end;             //checks inventory, if we have supplies, and checks if we looped through to much
+  until {find dead} {CheckInventory or (count > 300);
+end;  }           //checks inventory, if we have supplies, and checks if we looped through to much

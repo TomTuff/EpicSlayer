@@ -23,9 +23,12 @@ procedure SetupEpicSlayer;
 begin
   SetLength(Monsters, 100);    //Change this number if new NPCs are added to list.
   SetupMonsters;
-  SetLength(SlayerGear, 24);  //Change this number if more slayer gear is added.
+  SetLength(SlayerGear, 24);   //Change this number if more slayer gear is added.
   SetupSlayerGear;
-  SetLength(Masters, 7);
+  SetLength(Masters, 7);       //Change this number if more masters are added.
   SetupMasters;
+  SetLength(Slayers, HowManySlayers);
+  NumberOfPlayers(HowManySlayers);
   SetupSRL;
+  R_UpdateHooks;
 end;
