@@ -13,6 +13,12 @@ begin
                 MONSTER_DWARF, MONSTER_GHOST, MONSTER_ICEFIEND, MONSTER_MINOTAUR,
                 MONSTER_MONKEY, MONSTER_SCORPION, MONSTER_SPIDER, MONSTER_WOLF,
                 MONSTER_ZOMBIE];
+    Color := -1;
+    Tolerance := -1;
+    HueMod := -1.00;
+    SatMod := -1.00;
+    ATPADist := 25;
+    MinLength := 15;
   end;
 
   with Masters[MASTER_CANIFIS] do
@@ -28,6 +34,12 @@ begin
                 MONSTER_KALPHITE, MONSTER_MOGRE, MONSTER_PYREFIEND,
                 MONSTER_ROCK_SLUG, MONSTER_SKELETON, MONSTER_VAMPIRE,
                 MONSTER_WALL_BEAST, MONSTER_WOLF, MONSTER_ZOMBIE];
+    Color := -1;
+    Tolerance := -1;
+    HueMod := -1.00;
+    SatMod := -1.00;
+    ATPADist := 25;
+    MinLength := 15;
   end;
 
 
@@ -48,6 +60,12 @@ begin
                 MONSTER_PYREFIEND, MONSTER_SEA_SNAKE, MONSTER_SHADE,
                 MONSTER_SHADOW_WARRIOR, MONSTER_TUROTH, MONSTER_VAMPIRE,
                 MONSTER_WEREWOLF];
+    Color := -1;
+    Tolerance := -1;
+    HueMod := -1.00;
+    SatMod := -1.00;
+    ATPADist := 25;
+    MinLength := 15;
   end;
 
 
@@ -66,6 +84,12 @@ begin
                 MONSTER_LESSER_DEMON, MONSTER_MUTATED_ZYGOMITE,
                 MONSTER_SHADOW_WARRIOR, MONSTER_TROLL, MONSTER_TUROTH,
                 MONSTER_WARPED_TORTOISE];
+    Color := -1;
+    Tolerance := -1;
+    HueMod := -1.00;
+    SatMod := -1.00;
+    ATPADist := 25;
+    MinLength := 15;
   end;
 
 
@@ -85,6 +109,12 @@ begin
                 MONSTER_SPIRITUAL_MAGE, MONSTER_SPIRITUAL_WARRIOR,
                 MONSTER_TERROR_DOG, MONSTER_TROLL, MONSTER_TUROTH,
                 MONSTER_WARPED_TORTOISE];
+    Color := -1;
+    Tolerance := -1;
+    HueMod := -1.00;
+    SatMod := -1.00;
+    ATPADist := 25;
+    MinLength := 15;
   end;
 
 
@@ -103,6 +133,12 @@ begin
                 MONSTER_SCABARITE, MONSTER_SKELETAL_WYVERN, MONSTER_SPIRITUAL_MAGE,
                 MONSTER_STEEL_DRAGON, MONSTER_SUQAH, MONSTER_WARPED_TERRORBIRD,
                 MONSTER_WATERFIEND];
+    Color := -1;
+    Tolerance := -1;
+    HueMod := -1.00;
+    SatMod := -1.00;
+    ATPADist := 25;
+    MinLength := 15;
   end;
 
 
@@ -122,5 +158,11 @@ begin
                 MONSTER_NECHRYAELS, MONSTER_SKELETAL_WYVERN, MONSTER_SPIRITUAL_MAGE,
                 MONSTER_STEEL_DRAGON, MONSTER_SUQAH, MONSTER_TERROR_DOG, MONSTER_TZHAAR,
                 MONSTER_WARPED_TORTOISE, MONSTER_WATERFIEND];
+    Color := -1;
+    Tolerance := -1;
+    HueMod := -1.00;
+    SatMod := -1.00;
+    ATPADist := 25;
+    MinLength := 15;
   end;
 end;

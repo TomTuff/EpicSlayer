@@ -19,6 +19,8 @@ type TMaster = record
   IDs: TVariantArray;
   SlayerLevelReq, CombatLevelReq: Integer;
   Assigns: TIntegerArray;
+  Color, Tolerance, ATPADist, MinLength: Integer;
+  HueMod, SatMod: Extended;
 end;
 
 
