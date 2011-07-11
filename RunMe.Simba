@@ -55,6 +55,7 @@ begin
           if FindBlackChatMessage(Monsters[i].Name[ii]) then
           begin
             Slayers[CurrentPlayer].Assignment.Monster := i;
+            Break;
           end;
       if (Slayers[CurrentPlayer].Assignment.Monster <> -1) then
       begin
