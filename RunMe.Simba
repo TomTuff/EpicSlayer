@@ -26,11 +26,11 @@ begin
 end;
 
 
+//To be moved to Masters.Simba
 function GetTask: Boolean;
 label ProcStart;
 var
   Master: TNPC;
-  P: TPoint;
   i, ii, T: Integer;
   ChatLines: TStringArray;
 begin
@@ -48,7 +48,7 @@ begin
     R_WalkToTile(Master.Tile, 2, 0);
     goto ProcStart;
   end;
-  if ClickNPC(Master, Slayers[CurrentPlayer].Master.Color, Slayers[CurrentPlayer].Master.Tolerance,
+  if ClickNPC(False, NULL_NPC, Slayers[CurrentPlayer].Master.Color, Slayers[CurrentPlayer].Master.Tolerance,
               Slayers[CurrentPlayer].Master.HueMod, Slayers[CurrentPlayer].Master.SatMod,
               Slayers[CurrentPlayer].Master.ATPADist, Slayers[CurrentPlayer].Master.MinLength,
               Slayers[CurrentPlayer].Master.Names, False, ['Get-task']) then
