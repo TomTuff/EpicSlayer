@@ -133,12 +133,12 @@ begin
                 MONSTER_SCABARITE, MONSTER_SKELETAL_WYVERN, MONSTER_SPIRITUAL_MAGE,
                 MONSTER_STEEL_DRAGON, MONSTER_SUQAH, MONSTER_WARPED_TERRORBIRD,
                 MONSTER_WATERFIEND];
-    Color := -1;
-    Tolerance := -1;
-    HueMod := -1.00;
-    SatMod := -1.00;
+    Color := 3304102;
+    Tolerance := 8;
+    HueMod := 0.02;
+    SatMod := 0.14;
     ATPADist := 25;
-    MinLength := 15;
+    MinLength := 10;
   end;
 
 
@@ -164,5 +164,69 @@ begin
     SatMod := -1.00;
     ATPADist := 25;
     MinLength := 15;
+  end;
+end;
+
+
+//Needs a bit of clean up?
+function GetTask: Boolean;
+var
+  i, ii, T: Integer;
+  ChatLines: TStringArray;
+begin
+  if not(LoggedIn) then
+    Exit;
+  if ClickNPC(False, NULL_NPC, Slayers[CurrentPlayer].Master.Color, Slayers[CurrentPlayer].Master.Tolerance,
+              Slayers[CurrentPlayer].Master.HueMod, Slayers[CurrentPlayer].Master.SatMod,
+              Slayers[CurrentPlayer].Master.ATPADist, Slayers[CurrentPlayer].Master.MinLength,
+              Slayers[CurrentPlayer].Master.Names, False, ['Get-task']) then
+  begin
+    T := GetSystemTime + 2000;
+    while (GetSystemTime < T) and not(Result) do
+      Result := FindNPCChatText('nother', Nothing);
+    if not(Result) then
+      Exit
+    else
+      Result := False;
+    if ClickContinue(True, False) then
+    begin
+      Wait(1800 + Random(100));
+      if FindNPCChatText('still', Nothing) then
+      begin
+        Writeln('You''re still on a task!');
+        for i := 0 to High(Monsters) do
+          for ii := 0 to High(Monsters[i].Name) do
+          begin
+            if FindNPCChatText(Lowercase(Monsters[i].Name[ii]), Nothing) then
+            begin
+              Slayers[CurrentPlayer].Assignment.Monster := i;
+              Writeln('Task: ' + IntToStr(i));
+              Exit;
+            end;
+          end;
+      end;
+      Slayers[CurrentPlayer].Assignment.Monster := -1;
+      for i := 0 to High(Monsters) do
+        for ii := 0 to High(Monsters[i].Name) do
+          if FindNPCChatText(Lowercase(Monsters[i].Name[ii]), Nothing) then
+          begin
+            Slayers[CurrentPlayer].Assignment.Monster := i;
+            Writeln('Task: ' + IntToStr(i));
+            Break;
+          end;
+      if (Slayers[CurrentPlayer].Assignment.Monster <> -1) then
+      begin
+        ChatLines := R_GetNPCChatMessages;
+        for i := 0 to High(ChatLines) do
+          if (GetNumbers(ChatLines[i]) <> '') then
+          begin
+            Slayers[CurrentPlayer].Assignment.Amount := StrToInt(GetNumbers(chatLines[i]));
+            Result := True;
+            Writeln(Slayers[CurrentPlayer].Assignment);
+            Break;
+          end;
+      end else
+        Writeln('Could not get task');
+    end;
   end;
 end;

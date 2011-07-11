@@ -26,53 +26,6 @@ begin
 end;
 
 
-//To be moved to Masters.Simba
-function GetTask: Boolean;
-var
-  i, ii, T: Integer;
-  ChatLines: TStringArray;
-begin
-  if not(LoggedIn) then
-    Exit;
-  if ClickNPC(False, NULL_NPC, Slayers[CurrentPlayer].Master.Color, Slayers[CurrentPlayer].Master.Tolerance,
-              Slayers[CurrentPlayer].Master.HueMod, Slayers[CurrentPlayer].Master.SatMod,
-              Slayers[CurrentPlayer].Master.ATPADist, Slayers[CurrentPlayer].Master.MinLength,
-              Slayers[CurrentPlayer].Master.Names, False, ['Get-task']) then
-  begin
-    T := GetSystemTime + 2000;
-    while (GetSystemTime < T) and not(Result) do
-      Result := FindBlackChatMessage('nother');
-    if not(Result) then
-      Exit
-    else
-      Result := False;
-    if ClickContinue(True, False) then
-    begin
-      Wait(50 + Random(20));
-      Slayers[CurrentPlayer].Assignment.Monster := -1;
-      for i := 0 to High(Monsters) do
-        for ii := 0 to High(Monsters[i].Name) do
-          if FindBlackChatMessage(Monsters[i].Name[ii]) then
-          begin
-            Slayers[CurrentPlayer].Assignment.Monster := i;
-            Break;
-          end;
-      if (Slayers[CurrentPlayer].Assignment.Monster <> -1) then
-      begin
-        ChatLines := R_GetNPCChatMessages;
-        for i := 0 to High(ChatLines) do
-          if (GetNumbers(ChatLines[i]) <> '') then
-          begin
-            Slayers[CurrentPlayer].Assignment.Amount := StrToInt(GetNumbers(chatLines[i]));
-            Result := True;
-            Break;
-          end;
-      end;
-    end;
-  end;
-end;
-
-
 var
   i: Integer;
 begin
@@ -85,8 +38,4 @@ begin
   DeclareSlayers;
   for i := 0 to (HowManySlayers - 1) do
     Players[i] := Slayers[i].User;
-  LoginPlayer;
-  SetAngle(True);
-  MakeCompass('n');
-  GetTask;
 end.
