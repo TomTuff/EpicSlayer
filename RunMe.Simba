@@ -28,26 +28,12 @@ end;
 
 //To be moved to Masters.Simba
 function GetTask: Boolean;
-label ProcStart;
 var
-  Master: TNPC;
   i, ii, T: Integer;
   ChatLines: TStringArray;
 begin
-  ProcStart:
   if not(LoggedIn) then
     Exit;
-  if not(R_FindNPCMulti(Slayers[CurrentPlayer].Master.IDs, True, Master)) then
-  begin
-    srl_Warn('GetTask', 'We could not find the slayer master.', warn_AllVersions);
-    Exit;
-  end;
-  if not(R_TileOnMS(Master.Tile, Round(2 / 3) * Master.Height)) then
-  begin
-    srl_Warn('GetTask', 'The master''s tile was not on the main screen, walking to the tile and re-finding', warn_AllVersions);
-    R_WalkToTile(Master.Tile, 2, 0);
-    goto ProcStart;
-  end;
   if ClickNPC(False, NULL_NPC, Slayers[CurrentPlayer].Master.Color, Slayers[CurrentPlayer].Master.Tolerance,
               Slayers[CurrentPlayer].Master.HueMod, Slayers[CurrentPlayer].Master.SatMod,
               Slayers[CurrentPlayer].Master.ATPADist, Slayers[CurrentPlayer].Master.MinLength,
