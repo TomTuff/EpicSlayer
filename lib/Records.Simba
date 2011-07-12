@@ -1,7 +1,9 @@
 type TMonster = record
-  Name: TStringArray;
-  SlayerLevel, Item: Integer;
+  Name: TVariantArray;
+  SlayerLevel, Item, Color, Tolerance: Integer;
+  HueMod, SatMod : Extended;
   Drops: TIntegerArray;
+  UseReflection : Boolean;
 end;
 
 

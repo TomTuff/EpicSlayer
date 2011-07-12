@@ -10,11 +10,11 @@
 //-------------------------------------\\
 {$i EpicSlayer\lib\Records.Simba}
 {$i EpicSlayer\lib\Constants.Simba}
+{$i EpicSlayer\lib\Player.Simba}
 {$i EpicSlayer\lib\Interaction.Simba}
 {$i EpicSlayer\lib\Paths.Simba}
 {$i EpicSlayer\lib\Fighting.Simba}
 {$i EpicSlayer\lib\Banking.Simba}
-{$i EpicSlayer\lib\Player.Simba}
 {$i EpicSlayer\lib\Masters.Simba}
 {$i EpicSlayer\lib\SlayerGear.Simba}
 {$i EpicSlayer\lib\Monsters.Simba}

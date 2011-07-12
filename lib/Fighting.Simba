@@ -1,20 +1,14 @@
 //fighting
-
-{function Escape : boolean;
+function Escape : boolean;
 begin
   //if out of food/supplies/inv full
   //telly out of place
   result := true;
 end;
 
-function EatFood : boolean;
-begin
-  result := true;
-end;
-
 function WaitForMonster : boolean;
 begin
-
+  result := true;
 end;
 
 function GetDrops : boolean;
@@ -25,23 +19,69 @@ begin
 end;
 
 function FindMonster : boolean;
+var
+  TempMArr : TNPCArray;
+  i, c : integer;
+  //tva : TVarriantArray;
+label Start;
 begin
-  //finds monster on minimap
-  //WaitForMonster
-end;
-
-function RelocateToMonster : boolean;
-begin
-  //if no monster on mainscreen, walks to monster
-  //thats not in a fight
+  result := false;
+  Start:
+  if c > 50 then
+  begin
+    writeln('Cannot find monster');
+    Escape;
+    exit;
+  end;
+  TempMArr := R_GetNPCsMulti(Monsters[slayers[CurrentPlayer].Assignment.Monster].name, false);
+  if length(TempMArr) <= 0 then
+  begin
+    waitformonster;
+    inc(c);
+    goto Start;
+  end;
+  for i := 0 to high(TempMArr) do
+    if  TempMArr[i].InCombat or (not r_tileonmm(TempMArr[i].tile)) then
+      continue
+    else
+      break;
+  if i > high(TempMArr) then
+  begin
+    waitformonster;
+    inc(c);
+    goto Start;
+  end;
+  r_walktotile(TempMArr[i].tile, 3, 0);
+  result := r_tileonms(TempMArr[i].tile, 0);
+  if not result then goto start;
+  writeln('Found Monster');
 end;
 
 function CheckFood : boolean;
+var
+  Food : TInvItemArray;
+  i : integer;
 begin
-  //checks if have food, if not escape,
-  //if so check if need to eat
+  result := false;
+  if not R_ItemExistsEx([FOOD_TUNA, FOOD_TROUT, FOOD_LOBSTER, FOOD_MONKFISH,
+                     FOOD_SWORDFISH, FOOD_SHARK], Food) then
+    exit;
+
   if HPPercent < 50 then
-   EatFood;
+    for i := 0 to high(food) do
+    begin
+      writeln('Eating, in loop');
+      R_ClickItem(Food[i].slot, 'Eat');
+      wait(1250 + random(500));
+      if HPPercent > 75 then break;
+    end;
+  if HPPercent < 50 then
+  begin
+    writeln('Eating didn''t help. Exiting');
+    Escape;
+    exit;
+  end;
+
   result := true;
 end;
 
@@ -63,16 +103,54 @@ end;
 
 function CheckInventory : boolean;
 begin
-
+  CheckFood;
+  result := false;
 end;
 
 function FightMonster : boolean;
+var
+  TempMArr : TNPCArray;
+  tmpMonster : TMonster;
+  i, c : integer;
+  tp : TPoint;
+label
+  here;
 begin
-
+  tmpMonster := Monsters[slayers[CurrentPlayer].Assignment.Monster];
+  here:
+  inc(c);
+  if c > 10 then
+  begin
+    escape;
+    exit;
+  end;
+  if not FindMonster then escape;
+  TempMArr := R_GetNPCsMulti(tmpMonster.name, false);
+  for i := 0 to high(TempMArr) do
+  begin
+    if TempMArr[i].incombat then continue;
+    tp := r_tiletoms(TempMArr[i].Tile, round(TempMArr[i].Height * 0.75));
+    break;
+  end;
+  writeln(TempMArr[i]);
+  {  }
+  if not tmpMonster.UseReflection then
+    with tmpMonster do
+    ClickNPC(true, TempMArr[i], Color, Tolerance, HueMod, SatMod, 7, 3, [TempMArr[i].name], true, ['ttack'])
+  else
+  begin
+    mmouse(tp.x, tp.y, 3, 3);
+    if not waituptext('ttack', 2000) then goto here;
+    getmousepos(tp.x, tp.y);
+    mouse(tp.x, tp.y, 0, 0, true);
+  end;
+  result := didredclick;
+  writeln('Clicked monster');
 end;
 
 function SetupFighting : boolean;
 begin
+  result := false;
   if not LoggedIn then
     loginplayer;
   R_FindRandoms;
@@ -82,6 +160,7 @@ begin
 
   if not CheckTask then
     exit;//dosomething
+  result := true;
 end;
 
 function DoFight : boolean;
@@ -92,20 +171,18 @@ begin
   CheckFood;
   CheckPotion;
   repeat
-    if not FindMonster then //finds monster on minimap
-      exit; //do some relocation stuff,
-            //check location, deathwalk stuff
-    if not RelocateToMonster then //walks to monster, so it's on mainscreen
-      exit;//can't get to monster for some reason
+    writeln('Finding monster');
+
     if not CheckFood or CheckPotion then //if out of food or pots
       if not Escape then //if cannot escape/go to bank
         exit;//do something
     if not R_InCombat then //if not in combat then attack monster
-      FightMonster;
+      if not FightMonster then continue;
     if didredclick then //checks if actually clicked monster
       while not r_InCombat do wait(10 + random(10));
     while R_InCombat do //loops through while in combat
     begin
+      writeln('In combat loop');
       //AntiBan
       //check if dead
       CheckInventory;     //eat food
@@ -120,5 +197,5 @@ begin
     end;
     GetDrops; //checks for drops
     inc(count); //failsafe
-  until {find dead} {CheckInventory or (count > 300);
-end;  }           //checks inventory, if we have supplies, and checks if we looped through to much
+  until {find dead} CheckInventory or (count > 300);
+end;             //checks inventory, if we have supplies, and checks if we looped through to much
