@@ -6,6 +6,7 @@ begin
     Slot := EQUIPMENT_HELMET;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 4164;
   end;
 
 
@@ -15,6 +16,7 @@ begin
     Slot := EQUIPMENT_HELMET;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 4166;
   end;
 
 
@@ -24,6 +26,7 @@ begin
     Slot := EQUIPMENT_SLOT_NULL;
     Finisher := True;
     MinFinishLP := 30;
+    ItemID := 4161;
   end;
 
 
@@ -33,6 +36,7 @@ begin
     Slot := EQUIPMENT_SLOT_NULL;
     Finisher := True;
     MinFinishLP := 20;
+    ItemID := 6696;
   end;
 
 
@@ -42,6 +46,7 @@ begin
     Slot := EQUIPMENT_SLOT_OFF_HAND;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 4156;
   end;
 
 
@@ -51,6 +56,7 @@ begin
     Slot := EQUIPMENT_SLOT_NULL;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := -1; //Need someones help to get this ID
   end;
 
 
@@ -60,6 +66,7 @@ begin
     Slot := EQUIPMENT_SLOT_OFF_HAND;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 7053; //Lit
   end;
 
 
@@ -69,6 +76,7 @@ begin
     Slot := EQUIPMENT_SLOT_HEAD;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 4551;
   end;
 
 
@@ -78,6 +86,7 @@ begin
     Slot := EQUIPMENT_SLOT_NECK;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 8923;
   end;
 
 
@@ -87,6 +96,7 @@ begin
     Slot := EQUIPMENT_SLOT_HEAD;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 8921; //This is the one with no charges
   end;
 
 
@@ -96,6 +106,7 @@ begin
     Slot := EQUIPMENT_SLOT_HEAD;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 15490;
   end;
 
 
@@ -105,6 +116,7 @@ begin
     Slot := EQUIPMENT_SLOT_HEAD;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 15488;
   end;
 
 
@@ -114,6 +126,7 @@ begin
     Slot := EQUIPMENT_SLOT_HEAD;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 13263;
   end;
 
 
@@ -123,6 +136,7 @@ begin
     Slot := EQUIPMENT_SLOT_HEAD;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := -1;
   end;
 
 
@@ -132,6 +146,7 @@ begin
     Slot := EQUIPMENT_SLOT_FEET;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 7159;
   end;
 
 
@@ -141,6 +156,7 @@ begin
     Slot := EQUIPMENT_SLOT_NULL;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 10952;
   end;
 
 
@@ -150,6 +166,7 @@ begin
     Slot := EQUIPMENT_SLOT_HANDS;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 6720;
   end;
 
 
@@ -159,6 +176,7 @@ begin
     Slot := EQUIPMENT_SLOT_NULL;
     Finisher := True;
     MinFinishLP := 20;
+    ItemID := 7421;
   end;
 
 
@@ -168,6 +186,7 @@ begin
     Slot := EQUIPMENT_SLOT_NULL;
     Finisher := True;
     MinFinishLP := -1;
+    ItemID := 7432;
   end;
 
 
@@ -177,6 +196,7 @@ begin
     Slot := EQUIPMENT_SLOT_HEAD;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 4168;
   end;
 
 
@@ -186,6 +206,7 @@ begin
     Slot := EQUIPMENT_SLOT_NULL;
     Finisher := True;
     MinFinishLP := 110;
+    ItemID := 4162;
   end;
 
 
@@ -195,6 +216,7 @@ begin
     Slot := EQUIPMENT_SLOT_NULL;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := -1; //Need help on this one, havent done the quest
   end;
 
 
@@ -204,6 +226,7 @@ begin
     Slot := EQUIPMENT_SLOT_OFF_HAND;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 1540;
   end;
 
 
@@ -213,5 +236,6 @@ begin
     Slot := EQUIPMENT_SLOT_OFF_HAND;
     Finisher := False;
     MinFinishLP := -1;
+    ItemID := 2890;
   end;
 end;
