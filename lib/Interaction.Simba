@@ -1,5 +1,5 @@
 {
-  UseReflectionBounds = Use NPC's reflection tile(s) to get search area
+  UseReflection = Use reflection/Use NPC's reflection tile(s) to get search area
   NPC = the reflection NPC
   Color = main color
   Tolerance = tolerance
@@ -10,7 +10,7 @@
   LeftClick = whether to left click or not (if right click, chooses options)
   Options = options to choose if left clicking
 }
-function ClickNPC(UseReflectionBounds: Boolean; NPC: TNPC; Color, Tolerance: Integer;
+function ClickNPC(UseReflection: Boolean; NPC: TNPC; Color, Tolerance: Integer;
                   HueMod, SatMod: Extended; ATPADist, MinLength: Integer;
                   Uptexts: TStringArray; LeftClick: Boolean;
                   Options: TStringArray): Boolean;
@@ -24,7 +24,7 @@ var
   i, H, x, y: Integer;
 begin
   MakeCompass('n');
-  if UseReflectionBounds then
+  if UseReflection then
   begin
     if not(R_TileOnMS(NPC.Tile, Round(2/3) * NPC.Height)) then
       R_WalkToTile(NPC.Tile, 0, 0);

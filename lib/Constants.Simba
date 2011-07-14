@@ -254,3 +254,71 @@ var
 //-------------------------------------\\
 var
   Masters: array of TMaster;
+
+
+//-------------------------------------\\
+//          Locations Arrays           \\
+//-------------------------------------\\
+var
+  TeleportLocations: array of TLocation;
+  BankLocations: array of TLocation;
+  MonsterLocations: array of TLocation;
+
+
+//-------------------------------------\\
+//    Teleport Location Constants      \\
+//-------------------------------------\\
+const
+  LOC_TEL_VARROCK = 0;
+  LOC_TEL_GRAND_EXCHANGE = 1;
+  LOC_TEL_LUMBRIDGE = 2;
+  LOC_TEL_FALADOR = 3;
+  LOC_TEL_EDGEVILLE = 4;
+  LOC_TEL_CAMELOT_1 = 5;
+  LOC_TEL_CAMELOT_2 = 6;
+  LOC_TEL_ARDOUGNE = 7;
+  LOC_TEL_TROLLHEIM = 8;
+  LOC_TEL_CABBAGE_PORT = 9;
+  LOC_TEL_DUEL_ARENA = 10;
+  LOC_TEL_CASTLE_WARS = 11;
+  LOC_TEL_MOBILISING_ARMIES = 12;
+  LOC_TEL_FIST_OF_GUTHIX = 13;
+  LOC_TEL_SORC_GARDEN = 14;
+  LOC_TEL_MISCELLANIA = 15;
+  LOC_TEL_WARRIORS_GUILD = 16;
+  LOC_TEL_CHAMPIONS_GUILD = 17;
+  LOC_TEL_MONASTERY = 18;
+  LOC_TEL_RANGING_GUILD = 19;
+  LOC_TEL_BURTHORPE = 20;
+  LOC_TEL_GAMERS_GROTTO = 21;
+  LOC_TEL_KARAMJA = 22;
+  LOC_TEL_DRAYNOR = 23;
+  LOC_TEL_MOONCLAN = 24;
+  LOC_TEL_OURIANA = 25;
+  LOC_TEL_WATERBIRTH = 26;
+  LOC_TEL_BARBARIAN_TEL = 27;
+  LOC_TEL_KHAZARD = 28;
+  LOC_TEL_FISHING_GUILD = 29;
+  LOC_TEL_CATHERBY = 30;
+  LOC_TEL_ICE_PLATEAU = 31;
+  LOC_TEL_PADEWWA = 32;
+  LOC_TEL_SENNTISTEN = 33;
+  LOC_TEL_KHARYLL = 34;
+  LOC_TEL_LASSAR = 35;
+  LOC_TEL_DAREEYAK = 36;
+  LOC_TEL_CARRALLANGAR = 37;
+  LOC_TEL_ANNAKARL = 38;
+  LOC_TEL_GHORROCK = 39;
+  LOC_TEL_POLLNIVNEACH = 40;
+  LOC_TEL_SLAYER_TOWER = 41;
+  LOC_TEL_SLAYER_CAVES = 42;
+  LOC_TEL_TARNS_LAIR = 43;
+  LOC_TEL_MINING_GUILD = 44;
+  LOC_TEL_CRAFTING_GUILD = 45;
+  LOC_TEL_COOKING_GUILD = 46;
+  LOC_TEL_DAEMONHEIM = 47;
+  LOC_TEL_BARBARIAN_OUTPOST = 48;
+
+  //Bank Locations
+
+  //Monster Locations

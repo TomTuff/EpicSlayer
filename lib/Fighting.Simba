@@ -167,6 +167,7 @@ function DoFight : boolean;
 var
   c, count : integer;
 begin
+  Result := False;
   SetupFighting;
   CheckFood;
   CheckPotion;

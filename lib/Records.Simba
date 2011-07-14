@@ -1,3 +1,7 @@
+{
+  type TMonster
+    Contains information on different monsters
+}
 type TMonster = record
   Name: TVariantArray;
   SlayerLevel, Item, Color, Tolerance: Integer;
@@ -7,6 +11,10 @@ type TMonster = record
 end;
 
 
+{
+  type TSlayerGear
+    Contains information on slayer gear such as rock hammers and anti-dragon shields
+}
 type TSlayerGear = record
   Equips: Boolean;
   Slot: Integer;
@@ -16,6 +24,10 @@ type TSlayerGear = record
 end;
 
 
+{
+  type TMaster
+    Contains information on the different Slayer masters
+}
 type TMaster = record
   Names: TStringArray;
   IDs: TVariantArray;
@@ -26,13 +38,39 @@ type TMaster = record
 end;
 
 
+{
+  type TAssignment
+    Contains information on the player's current assignment, such as monster type
+    and amount.
+}
 type TAssignment = record
   Monster, Amount: Integer;
 end;
 
 
+{
+  type TSlayer
+    Like TUser, but also contains information essential to Slayer
+}
 type TSlayer = record
   User: TUser;
   Master: TMaster;
   Assignment: TAssignment;
+end;
+
+
+{
+  type fnct_LocationType
+    enumerates types of TLocations
+}
+type fnct_LocationType = (null, Bank, Teleport, Monster);
+
+
+{
+  type TLocation
+    Contains location information
+}
+type TLocation = record
+  Tile: TTile;
+  TypeOf: fnct_LocationType;
 end;

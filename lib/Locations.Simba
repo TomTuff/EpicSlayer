@@ -1,0 +1,106 @@
+function NULL_LOCATION: TLocation;
+begin
+  Result.TypeOf := null;
+  Result.Tile := Point(null, null);
+end;
+
+
+procedure SetLocations;
+var
+  i: Integer;
+begin
+  for i := 0 to High(TeleportLocations) do
+    TeleportLocations[i].TypeOf := Teleport;
+  for i := 0 to High(BankLocations) do
+    BankLocations[i].TypeOf := Bank;
+  for i := 0 to High(MonsterLocations) do
+    BankLocations[i].TypeOf := Monster;
+
+  TeleportLocations[LOC_TEL_VARROCK].Tile := Point(3212, 3430);
+  TeleportLocations[LOC_TEL_GRAND_EXCHANGE].Tile := Point(3166, 3466);
+  TeleportLocations[LOC_TEL_LUMBRIDGE].Tile := Point(3219, 3218);
+  TeleportLocations[LOC_TEL_FALADOR].Tile := Point(2965, 3378);
+  TeleportLocations[LOC_TEL_EDGEVILLE].Tile := Point(3087, 3496);
+  TeleportLocations[LOC_TEL_CAMELOT_1].Tile := Point(2759, 3478);
+  TeleportLocations[LOC_TEL_CAMELOT_2].Tile := Point(2706, 3483);
+  TeleportLocations[LOC_TEL_ARDOUGNE].Tile := Point(2659, 3304);
+  TeleportLocations[LOC_TEL_TROLLHEIM].Tile := Point(2883, 3669);
+  TeleportLocations[LOC_TEL_DAEMONHEIM].Tile := Point(3447, 3697);
+  TeleportLocations[LOC_TEL_CABBAGE_PORT].Tile := Point(3054, 3289);
+  TeleportLocations[LOC_TEL_DUEL_ARENA].Tile := Point(3314, 3237);
+  TeleportLocations[LOC_TEL_CASTLE_WARS].Tile := Point(2440, 3092);
+  TeleportLocations[LOC_TEL_MOBILISING_ARMIES].Tile := Point(2413, 2847);
+  TeleportLocations[LOC_TEL_FIST_OF_GUTHIX].Tile := Point(1693, 5599);
+  TeleportLocations[LOC_TEL_SORC_GARDEN].Tile := Point(3321, 3141); //House you enter after drinking from the fountain after using broom stick
+  TeleportLocations[LOC_TEL_MISCELLANIA].Tile := Point(2508, 3861);
+  TeleportLocations[LOC_TEL_WARRIORS_GUILD].Tile := Point(2884, 3549);
+  TeleportLocations[LOC_TEL_CHAMPIONS_GUILD].Tile := Point(3192, 3366);
+  TeleportLocations[LOC_TEL_MONASTERY].Tile := Point(3053, 3488);
+  TeleportLocations[LOC_TEL_RANGING_GUILD].Tile := Point(2654, 3442);
+  TeleportLocations[LOC_TEL_BURTHORPE].Tile := Point(2880, 3561);
+  TeleportLocations[LOC_TEL_BARBARIAN_OUTPOST].Tile := Point(2519, 3570);
+  TeleportLocations[LOC_TEL_GAMERS_GROTTO].Tile := Point(2969, 9679);
+  TeleportLocations[LOC_TEL_KARAMJA].Tile := Point(2918, 3176);
+  TeleportLocations[LOC_TEL_DRAYNOR].Tile := Point(3105, 3251);
+  TeleportLocations[LOC_TEL_MOONCLAN].Tile := Point(2115, 3914);
+  TeleportLocations[LOC_TEL_OURIANA].Tile := Point(2466, 3244);
+  TeleportLocations[LOC_TEL_WATERBIRTH].Tile := Point(2547, 3754);
+  TeleportLocations[LOC_TEL_BARBARIAN_TEL].Tile := Point(2544, 3570);
+  TeleportLocations[LOC_TEL_KHAZARD].Tile := Point(2635, 3168);
+  TeleportLocations[LOC_TEL_FISHING_GUILD].Tile := Point(2614, 3383);
+  TeleportLocations[LOC_TEL_CATHERBY].Tile := Point(2801, 3451);
+  TeleportLocations[LOC_TEL_ICE_PLATEAU].Tile := Point(2974, 3938);
+  TeleportLocations[LOC_TEL_PADEWWA].Tile := Point(3099, 9884);
+  TeleportLocations[LOC_TEL_SENNTISTEN].Tile := Point(3322, 3337);
+  TeleportLocations[LOC_TEL_KHARYLL].Tile := Point(3492, 3471);
+  TeleportLocations[LOC_TEL_LASSAR].Tile := Point(3002, 3469);
+  TeleportLocations[LOC_TEL_DAREEYAK].Tile := Point(2969, 3694);
+  TeleportLocations[LOC_TEL_CARRALLANGAR].Tile := Point(3221, 3668);
+  TeleportLocations[LOC_TEL_ANNAKARL].Tile := Point(3287, 3887);
+  TeleportLocations[LOC_TEL_GHORROCK].Tile := Point(2973, 3875);
+  TeleportLocations[LOC_TEL_POLLNIVNEACH].Tile := Point(3361, 2991);
+  TeleportLocations[LOC_TEL_SLAYER_TOWER].Tile := Point(3429, 3533);
+  TeleportLocations[LOC_TEL_SLAYER_CAVES].Tile := Point(2788, 3615);
+  TeleportLocations[LOC_TEL_TARNS_LAIR].Tile := Point(3187, 4601);
+  TeleportLocations[LOC_TEL_MINING_GUILD].Tile := Point(3014, 3339);
+  TeleportLocations[LOC_TEL_CRAFTING_GUILD].Tile := Point(2935, 3295);
+  TeleportLocations[LOC_TEL_COOKING_GUILD].Tile := Point(3144, 3442);
+
+  //Bank Locations
+
+  //Monster Locations
+end;
+
+
+function GetClosestTeleport(From: TPoint): Integer;
+//Returns the constant name
+var
+  TelPointArr: TPointArray;
+  i: Integer;
+begin
+  SetLength(TelPointArr, Length(TeleportLocations));
+  SortTPAFrom(TelPointArr, From);
+  for i := 0 to High(TeleportLocations) do
+    if (TelPointArr[0] = TeleportLocations[i].Tile) then
+    begin
+      Result := i;
+      Exit;
+    end;
+end;
+
+
+function GetClosestBank(From: TPoint): Integer;
+//Returns the constant name
+var
+  BankPointArr: TPointArray;
+  i: Integer;
+begin
+  SetLength(BankPointArr, Length(BankLocations));
+  SortTPAFrom(BankPointArr, From);
+  for i := 0 to High(BankLocations) do
+    if (BankPointArr[0] = BankLocations[i].Tile) then
+    begin
+      Result := i;
+      Exit;
+    end;
+end;

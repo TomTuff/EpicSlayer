@@ -10,7 +10,7 @@ const
   S_Signed = True;
   S_Members = True;
   S_SuperDetail = False;
-  //
+
   NumberOfSlayers = 1;
 
 

@@ -131,6 +131,7 @@ begin
                 MONSTER_SCABARITE, MONSTER_SKELETAL_WYVERN, MONSTER_SPIRITUAL_MAGE,
                 MONSTER_STEEL_DRAGON, MONSTER_SUQAH, MONSTER_WARPED_TERRORBIRD,
                 MONSTER_WATERFIEND];
+    IDs := ['8483'];
     Color := 3304102;
     Tolerance := 8;
     HueMod := 0.02;

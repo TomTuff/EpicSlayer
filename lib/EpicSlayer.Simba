@@ -12,7 +12,7 @@
 {$i EpicSlayer\lib\Constants.Simba}
 {$i EpicSlayer\lib\Player.Simba}
 {$i EpicSlayer\lib\Interaction.Simba}
-{$i EpicSlayer\lib\Paths.Simba}
+{$i EpicSlayer\lib\Locations.Simba}
 {$i EpicSlayer\lib\Fighting.Simba}
 {$i EpicSlayer\lib\Banking.Simba}
 {$i EpicSlayer\lib\Masters.Simba}
@@ -28,6 +28,10 @@ begin
   SetupSlayerGear;
   SetLength(Masters, 7);       //Change this number if more masters are added.
   SetupMasters;
+  SetLength(TeleportLocations, 49);
+  SetLength(MonsterLocations, 0);
+  SetLength(BankLocations, 0);
+  SetLocations;
   SetLength(Slayers, HowManySlayers);
   NumberOfPlayers(HowManySlayers);
   SetupSRL;
