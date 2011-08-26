@@ -1,72 +1,37 @@
-{
-  UseReflection = Use reflection/Use NPC's reflection tile(s) to get search area
-  NPC = the reflection NPC
-  Color = main color
-  Tolerance = tolerance
-  HueMod/SatMod = CTS mods
-  ATPADist = the distance to split ATPA by
-  MinLength = minimum length of a tpa to mouse to
-  Uptexts = uptexts to search for
-  LeftClick = whether to left click or not (if right click, chooses options)
-  Options = options to choose if left clicking
-}
-function ClickNPC(UseReflection: Boolean; NPC: TNPC; Color, Tolerance: Integer;
-                  HueMod, SatMod: Extended; ATPADist, MinLength: Integer;
-                  Uptexts: TStringArray; LeftClick: Boolean;
-                  Options: TStringArray): Boolean;
+function ClickNPC(Searches: TVariantArray; NullNPC, LeftClick: Boolean; Options: TStringArray): Boolean;
+label ProcStart;
 var
-  SearchBox: TBox;
-  TempPoint: TPoint;
-  Mods: array[0..1] of Extended;
-  CTS: Integer;
-  TPA: TPointArray;
-  ATPA: T2DPointArray;
-  i, H, x, y: Integer;
+  NPC: TNPC;
+  P: TPoint;
+  SearchText: string;
 begin
-  MakeCompass('n');
-  if UseReflection then
+  ProcStart:
+  if R_FindNPCMulti(Searches, NullNPC, NPC) then
   begin
-    if not(R_TileOnMS(NPC.Tile, Round(2/3) * NPC.Height)) then
-      R_WalkToTile(NPC.Tile, 0, 0);
-    TempPoint := R_TileToMSEx(Point(NPC.TileArea.X1, NPC.TileArea.Y2), 0, 0, NPC.Height);
-    SearchBox.X1 := TempPoint.x;
-    SearchBox.Y1 := TempPoint.y;
-    TempPoint := R_TileToMSEx(Point(NPC.TileArea.X2, NPC.TileArea.Y2), 1, 1, 0);
-    SearchBox.X2 := TempPoint.x;
-    SearchBox.Y2 := TempPoint.y;
-  end else
-    SearchBox := MSBox;
-  GetColorspeed2Modifiers(Mods[0], Mods[1]);
-  CTS := GetColorToleranceSpeed;
-  FindColorsTolerance(TPA, Color, SearchBox.X1, SearchBox.Y1, SearchBox.X2, SearchBox.Y2, Tolerance);
-  SetColorspeed2Modifiers(Mods[0], Mods[1]);
-  SetColorToleranceSpeed(CTS);
-  if (Length(TPA) < 1) then
-    Exit;
-  SortTPAFrom(TPA, MiddleBox(SearchBox));
-  ATPA := TPAtoATPA(TPA, ATPADist);
-  H := High(ATPA);
-  for i := 0 to H do
-  begin
-    if (Length(ATPA[i]) < MinLength) then
-      Continue;
-    MiddleTPAEx(ATPA[i], x, y);
-    MMouse(x - 4, y - 4, 8, 8);
-    Wait(50 + Random(20));
-    if (IsUpTextMultiCustom(Uptexts) or R_IsUpTextMulti(Uptexts)) then
-    begin
-      if LeftClick then
-      begin
-        ClickMouse2(True);
-        Result := True;
-        Exit;
-      end else
-      begin
-        ClickMouse2(False);
-        Result := ChooseOptionMulti(Options) or R_ChooseOptionMulti(Options);
-        if Result then
+    if not(R_TileOnMS(NPC.Tile, 0)) then
+      if not(R_TileOnMM(NPC.Tile)) then
+        if not(R_WindWalk(NPC.Tile)) then
+          Exit
+        else
+          GoTo ProcStart
+      else
+        if R_WalkToTile(NPC.Tile, 2, 0) then
+          GoTo ProcStart
+        else
           Exit;
-      end;
+    P := R_TileToMS(NPC.Tile, NPC.Height * 2 div 3);
+    MMouse(P.x - 2, P.y - 2, 4, 4);
+    case NullNPC of
+      True: SearchText := 'more';
+      False: SearchText := NPC.Name;
+    end;
+    if R_WaitUptext(SearchText, 900 + Random(300)) then
+    begin
+      ClickMouse2(LeftClick);
+      if LeftClick then
+        Result := R_WaitCrossHairColor(CROSSHAIR_RED, 500 + Random(100))
+      else
+        Result := R_WaitOptionMulti(Options, 900 + Random(300));
     end;
   end;
 end;

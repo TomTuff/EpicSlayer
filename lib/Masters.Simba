@@ -3,6 +3,7 @@ begin
   with Masters[MASTER_BURTHORPE] do
   begin
     Names := ['Turael', 'Spria'];
+    IDs := [8480];
     SlayerLevelReq := 1;
     CombatLevelReq := 1;
     Assigns := [MONSTER_BANSHEE, MONSTER_BAT, MONSTER_BIRD, MONSTER_BEAR,
@@ -11,17 +12,13 @@ begin
                 MONSTER_DWARF, MONSTER_GHOST, MONSTER_ICEFIEND, MONSTER_MINOTAUR,
                 MONSTER_MONKEY, MONSTER_SCORPION, MONSTER_SPIDER, MONSTER_WOLF,
                 MONSTER_ZOMBIE];
-    Color := -1;
-    Tolerance := -1;
-    HueMod := -1.00;
-    SatMod := -1.00;
-    ATPADist := 25;
-    MinLength := 15;
+    IsNull := True;
   end;
 
   with Masters[MASTER_CANIFIS] do
   begin
     Names := ['Mazchna', 'Achtryn'];
+    IDs := [8482];
     SlayerLevelReq := 1;
     CombatLevelReq := 20;
     Assigns := [MONSTER_BANSHEE, MONSTER_BAT, MONSTER_BEAR, MONSTER_CATABLEPON,
@@ -32,18 +29,14 @@ begin
                 MONSTER_KALPHITE, MONSTER_MOGRE, MONSTER_PYREFIEND,
                 MONSTER_ROCK_SLUG, MONSTER_SKELETON, MONSTER_VAMPIRE,
                 MONSTER_WALL_BEAST, MONSTER_WOLF, MONSTER_ZOMBIE];
-    Color := -1;
-    Tolerance := -1;
-    HueMod := -1.00;
-    SatMod := -1.00;
-    ATPADist := 25;
-    MinLength := 15;
+    IsNull := True;
   end;
 
 
   with Masters[MASTER_EDGEVILLE] do
   begin
     Names := ['Vannaka'];
+    IDs := [1597];
     SlayerLevelReq := 1;
     CombatLevelReq := 40;
     Assigns := [MONSTER_ABERRANT_SPECTRE, MONSTER_ANKOU, MONSTER_BANSHEE,
@@ -58,18 +51,14 @@ begin
                 MONSTER_PYREFIEND, MONSTER_SEA_SNAKE, MONSTER_SHADE,
                 MONSTER_SHADOW_WARRIOR, MONSTER_TUROTH, MONSTER_VAMPIRE,
                 MONSTER_WEREWOLF];
-    Color := -1;
-    Tolerance := -1;
-    HueMod := -1.00;
-    SatMod := -1.00;
-    ATPADist := 25;
-    MinLength := 15;
+    IsNull := False;
   end;
 
 
   with Masters[MASTER_ZANARIS] do
   begin
     Names := ['Chaeldar'];
+    IDs := [1598];
     SlayerLevelReq := 1;
     CombatLevelReq := 70;
     Assigns := [MONSTER_ABERRANT_SPECTRE, MONSTER_BANSHEE, MONSTER_BASILISK,
@@ -82,18 +71,14 @@ begin
                 MONSTER_LESSER_DEMON, MONSTER_MUTATED_ZYGOMITE,
                 MONSTER_SHADOW_WARRIOR, MONSTER_TROLL, MONSTER_TUROTH,
                 MONSTER_WARPED_TORTOISE];
-    Color := -1;
-    Tolerance := -1;
-    HueMod := -1.00;
-    SatMod := -1.00;
-    ATPADist := 25;
-    MinLength := 15;
+    IsNull := False;
   end;
 
 
   with Masters[MASTER_POLLNIVNEACH] do
   begin
     Names := ['Sumona'];
+    IDs := [7779];
     SlayerLevelReq := 35;
     CombatLevelReq := 85;
     Assigns := [MONSTER_ABERRANT_SPECTRE, MONSTER_ABYSSAL_DEMON, MONSTER_AQUANITE,
@@ -107,18 +92,14 @@ begin
                 MONSTER_SPIRITUAL_MAGE, MONSTER_SPIRITUAL_WARRIOR,
                 MONSTER_TERROR_DOG, MONSTER_TROLL, MONSTER_TUROTH,
                 MONSTER_WARPED_TORTOISE];
-    Color := -1;
-    Tolerance := -1;
-    HueMod := -1.00;
-    SatMod := -1.00;
-    ATPADist := 25;
-    MinLength := 15;
+    IsNull := False;
   end;
 
 
   with Masters[MASTER_SHILO] do
   begin
     Names := ['Duradel', 'Lapalok'];
+    IDs := [8483];
     SlayerLevelReq := 50;
     CombatLevelReq := 100;
     Assigns := [MONSTER_ABERRANT_SPECTRE, MONSTER_ABYSSAL_DEMON, MONSTER_AQUANITE,
@@ -131,20 +112,14 @@ begin
                 MONSTER_SCABARITE, MONSTER_SKELETAL_WYVERN, MONSTER_SPIRITUAL_MAGE,
                 MONSTER_STEEL_DRAGON, MONSTER_SUQAH, MONSTER_WARPED_TERRORBIRD,
                 MONSTER_WATERFIEND];
-    IDs := ['8483'];
-    Color := 3304102;
-    Tolerance := 8;
-    HueMod := 0.02;
-    SatMod := 0.14;
-    ATPADist := 25;
-    MinLength := 10;
+    IsNull := True;
   end;
 
 
   with Masters[MASTER_ANCIENT_CAVERN] do
   begin
-    Names := ['Kuradal', 'Lapalok'];
-    IDs := [8483];
+    Names := ['Kuradal'];
+    IDs := [9085];
     SlayerLevelReq := 75;
     CombatLevelReq := 110;
     Assigns := [MONSTER_ABERRANT_SPECTRE, MONSTER_ABYSSAL_DEMON, MONSTER_AQUANITE,
@@ -157,12 +132,7 @@ begin
                 MONSTER_NECHRYAELS, MONSTER_SKELETAL_WYVERN, MONSTER_SPIRITUAL_MAGE,
                 MONSTER_STEEL_DRAGON, MONSTER_SUQAH, MONSTER_TERROR_DOG, MONSTER_TZHAAR,
                 MONSTER_WARPED_TORTOISE, MONSTER_WATERFIEND];
-    Color := -1;
-    Tolerance := -1;
-    HueMod := -1.00;
-    SatMod := -1.00;
-    ATPADist := 25;
-    MinLength := 15;
+    IsNull := False;
   end;
 end;
 
@@ -175,10 +145,8 @@ var
 begin
   if not(LoggedIn) then
     Exit;
-  if ClickNPC(False, NULL_NPC, Slayers[CurrentPlayer].Master.Color, Slayers[CurrentPlayer].Master.Tolerance,
-              Slayers[CurrentPlayer].Master.HueMod, Slayers[CurrentPlayer].Master.SatMod,
-              Slayers[CurrentPlayer].Master.ATPADist, Slayers[CurrentPlayer].Master.MinLength,
-              Slayers[CurrentPlayer].Master.Names, False, ['Get-task']) then
+  if ClickNPC(Slayers[CurrentPlayer].Master.IDs, Slayers[CurrentPlayer].Master.IsNull, False,
+              ['Get-task']) then
   begin
     T := GetSystemTime + 2000;
     while (GetSystemTime < T) and not(Result) do

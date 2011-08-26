@@ -34,6 +34,5 @@ begin
   SetLocations;
   SetLength(Slayers, HowManySlayers);
   NumberOfPlayers(HowManySlayers);
-  SetupSRL;
-  R_UpdateHooks;
+  SetupReflection;
 end;

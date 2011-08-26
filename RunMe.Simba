@@ -38,4 +38,7 @@ begin
   DeclareSlayers;
   for i := 0 to (HowManySlayers - 1) do
     Players[i] := Slayers[i].User;
+  LoginPlayer;
+  SetAngle(True);
+  writeln(GetTask);
 end.
